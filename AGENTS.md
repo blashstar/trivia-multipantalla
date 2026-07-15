@@ -188,7 +188,7 @@ El proyecto incluye configuración lista para Docker:
 
 - `Dockerfile`: usa `nginx:alpine`, instala `envsubst` y copia los archivos estáticos a `/usr/share/nginx/html`.
 - `entrypoint.sh`: genera `env.js` desde `env.js.template` usando variables de entorno, y luego inicia Nginx.
-- `docker-compose.yml`: define el servicio `trivia` expuesto en el puerto `80` y recibe las variables de entorno de Firebase.
+- `docker-compose.yml`: define el servicio `trivia`, recibe las variables de entorno de Firebase y expone el puerto `80` internamente para el proxy de Dokploy/Traefik. No mapea el puerto `80` del host para evitar conflictos con otros servicios.
 - `.env.example`: lista las variables de entorno necesarias.
 - `.dockerignore`: excluye backups, documentación, configuración de editores, credenciales y archivos de Docker del contexto de build.
 
