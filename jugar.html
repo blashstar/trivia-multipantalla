@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es" x-data="$aplicacion">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title x-text="`${titulo} | ${pagina}`">_</title>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css"
+			integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/mando.css" />
+	</head>
+	<body>
+		<div id="aplicacion">
+			<img :src="imagen('fondo')" alt="" class="fondo" />
+			<template x-if="pagina=='#'">
+				<section class="pagina"></section>
+			</template>
+			<template x-if="pagina=='no'">
+				<section class="pagina" id="no">
+					<div class="contenedor">
+						<h3>Lo sentimos, ya no puedes unirte al juego</h3>
+					</div>
+				</section>
+			</template>
+			<template x-if="pagina=='inicio'">
+				<section class="pagina" id="inicio">
+					<div class="contenedor">
+						<button @click="navegar('nombre')">
+							<img src="/img/visa/logo_trivia.svg" alt="" width="640px">
+						</button>
+					</div>
+				</section>
+			</template>
+			<template x-if="pagina=='sexo'">
+				<section class="pagina" id="sexo">
+					<h1>¿Cual es tu sexo?</h1>
+					<div class="opciones">
+						<label class="opcion" for="sexo-femenino">
+							<input
+								id="sexo-femenino"
+								type="radio"
+								value="F"
+								x-model="sexo"
+							/>
+							<div class="visual">
+								<img
+									:src="imagen('femenino')"
+									alt=""
+									width="60"
+								/>
+								<span>Femenino</span>
+							</div>
+						</label>
+						<label class="opcion" for="sexo-masculino">
+							<input
+								id="sexo-masculino"
+								type="radio"
+								value="M"
+								x-model="sexo"
+							/>
+							<div class="visual">
+								<img
+									:src="imagen('masculino')"
+									alt=""
+									width="60"
+								/>
+								<span>Masculino</span>
+							</div>
+						</label>
+					</div>
+					<h3
+						x-text="(sexos[sexo]?.toUpperCase())??'Elige una opcion'"
+					></h3>
+					<div>
+						<button
+							@click="navegar('nombre')"
+							:disabled="!sexo"
+							class=""
+						>
+							Continuar
+						</button>
+					</div>
+				</section>
+			</template>
+			<template x-if="pagina=='nombre'">
+				<section class="pagina" id="nombre">
+					<div class="trivia_marca">
+						<img src="/img/visa/logo_scotiabank.svg" alt="">
+					</div>
+					<div class="grupo">
+
+						<h1>¿Cual es tu nombre?</h1>
+						<div class="ingreso">
+							<input
+								type="text"
+								maxlength="16"
+								x-model="nombre"
+								placeholder="Nombre"
+							/>
+						</div>
+						<div>
+							<button
+								@click="registrar()"
+								:disabled="(nombre?.length < 3) || !registrable"
+								class=""
+							>
+								Continuar
+							</button>
+						</div>
+					</div>
+				</section>
+			</template>
+			<template x-if="pagina=='espera'">
+				<section class="pagina" id="espera">
+					<div class="trivia_marca">
+						<img src="/img/visa/logo_scotiabank.svg" alt="">
+					</div>
+
+					<div class="grupo">
+						<figure>
+							<img src="/img/visa/juego.svg" alt="" width="160">
+						</figure>
+						<div class="contenedor">
+
+							<div
+								class="titulo"
+								x-text="`Jugador ${etiqueta}`"
+							></div>
+
+							<div class="nombre" x-text="nombre"></div>
+							<figure>
+								<img src="/img/visa/estrella.svg" alt="" width="180">
+							</figure>
+							<div class="puntaje">
+								<strong>Tu puntaje final:</strong>
+								<div class="valor">
+									<figure>
+										<img src="/img/visa/gotas-este.svg" alt="" width="45">
+									</figure>
+									<span x-text="puntaje" class="cifra"></span>
+									<figure>
+										<img src="/img/visa/gotas-oeste.svg" alt="" width="45">
+									</figure>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</section>
+			</template>
+			<template x-if="pagina=='pregunta'">
+				<section class="pagina" id="pregunta">
+					<div class="trivia_marca">
+						<img src="/img/visa/logo_scotiabank.svg" alt="">
+					</div>
+					<div class="contenedor">
+						<div
+							class="contenido"
+							x-html="pregunta?.contenido"
+						></div>
+						<div class="opciones">
+							<template
+								x-for="(opcion, id) in pregunta?.respuestas"
+								:key="id"
+							>
+								<button
+									class="opcion"
+									:class="opcion === respuestaCorrecta ? 'correcta' : ''"
+									type="button"
+									@click="responder(id)"
+									:disabled="deshabilitada(id)"
+								>
+									<span
+										class="letra"
+										x-text="letra(id).toLowerCase()"
+									></span>
+									<span class="texto" x-html="opcion"></span>
+								</button>
+							</template>
+							<template x-if="correcta">
+								<div class="respuesta">
+									<span x-text="correcta"></span>
+								</div>
+							</template>
+						</div>
+						<div class="contestado" x-show="respuesta">
+							<span>Has contestado </span>
+							<strong x-text='`"${letra(respuesta)}"`'></strong>
+							<span>en </span>
+							<strong x-text="parseFloat(tiempoRespuesta).toFixed(2)"></strong>
+							<span>segundos</span>
+						</div>
+					</div>
+					<div class="tiempo" x-show="restante > 0">
+						<strong x-text="restante"></strong>
+					</div>
+				</section>
+			</template>
+			<template x-if="pagina=='final'">
+				<section class="pagina" id="final">
+
+					<div class="trivia_marca">
+						<img src="/img/visa/logo_scotiabank.svg" alt="">
+					</div>
+
+					<div class="grupo">
+						<figure>
+							<img src="/img/visa/juego.svg" alt="" width="160">
+						</figure>
+						<div class="contenedor">
+
+
+							<h1 x-text="ganador ? 'Ganaste' : 'Juego Finalizado'"></h1>
+							<figure>
+								<img src="/img/visa/estrella.svg" alt="" width="180">
+							</figure>
+							<div class="puntaje">
+								<strong>Tu puntaje final:</strong>
+								<div class="valor">
+									<figure>
+										<img src="/img/visa/gotas-este.svg" alt="" width="45">
+									</figure>
+									<span x-text="puntaje" class="cifra"></span>
+									<figure>
+										<img src="/img/visa/gotas-oeste.svg" alt="" width="45">
+									</figure>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</template>
+		</div>
+	</body>
+	<script>
+		window.opcionesJuego = {
+			evento: "Elifarma",
+			modulo: "mando",
+			imagenes: {
+				// fondo: "",
+				femenino: "img/personajes/mujer-podio.svg",
+				masculino: "img/personajes/hombre-podio.svg",
+			},
+		};
+	</script>
+	<script src="env.js"></script>
+	<script type="module">
+		async function iniciar() {
+			try {
+				const configResp = await fetch('./config.json');
+				const config = await configResp.json();
+
+				window.opcionesJuego = {
+					...window.opcionesJuego,
+					...config
+				};
+			} catch (error) {
+				console.error('No se pudo cargar config.json:', error);
+			}
+
+			await import('./js/mando.js');
+		}
+
+		iniciar();
+	</script>
+</html>

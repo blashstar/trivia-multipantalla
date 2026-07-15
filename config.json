@@ -1,0 +1,26 @@
+{
+  "evento": "visa-scotiabank",
+  "segundos": 15,
+  "logo": "img/visa/logo_trivia.svg",
+  "urlJugadores": "/jugar.html",
+  "pantallas": {
+    "inicio": {
+      "fondo": "img/visa/fondo.webp"
+    },
+    "espera": {
+      "fondo": "false"
+    },
+    "carrera": {
+      "fondo": "false"
+    },
+    "pregunta": {
+      "fondo": "false"
+    },
+    "podio": {
+      "fondo": "false"
+    }
+  },
+  "imagenes": {
+    "fondo": false
+  }
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es" x-data="$aplicacion">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title x-text="titulo">_</title>
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/13.0.0/sanitize.min.css"
+			integrity="sha512-y1dtMcuvtTMJc1yPgEqF0ZjQbhnc/bFhyvIyVNb9Zk5mIGtqVaAB1Ttl28su8AvFMOY0EwRbAe+HCLqj6W7/KA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/pantalla.css" />
+	</head>
+	<body>
+		<div id="aplicacion">
+			<img :src="fondo" :alt="pagina" class="fondo" />
+
+			<!-- <header id="encabezado" class="encabezado">
+				<div class="logo">
+					<img :src="logoCompleto" :alt="evento" width="330px" height="60px" />
+				</div>
+			</header> -->
+
+			<!-- <div id="tablero" x-show="jugadores" :class="pagina === 'espera' ? 'clase-espera' : (pagina === 'carrera' ? 'clase-carrera' : '')">
+				<template x-for="(jugador, id) in ganadores">
+					<div class="datos" :class="`jugador${id}`">
+						<div class="titulo">
+							<span
+								class="identificador"
+								x-text="jugador.etiqueta"
+							></span>
+							<span
+								class="nombre"
+								x-text="jugador.nombre"
+							></span>
+						</div>
+						<div class="dato puntaje">
+							<span x-text="jugador.puntaje"></span>
+						</div>
+						<div class="dato respuesta">
+							<span
+								x-text="letra(jugador.respuesta).toLowerCase()"
+							></span>
+						</div>
+						<div class="dato tiempo">
+							<span
+								x-text="parseFloat(jugador.tiempo).toFixed(2)"
+							></span>
+						</div>
+					</div>
+				</template>
+
+				<div class="etiqueta puntaje">Puntaje Total</div>
+				<div class="etiqueta respuesta">Respuesta</div>
+				<div class="etiqueta tiempo">Tiempo</div> -->
+
+			<div id="cronometro" x-show="pagina=='pregunta'">
+				<!-- <img
+					src="https://stringnetlab.com/msd/img/assets/tiempo.svg"
+					alt=""
+					width="80"
+				/> -->
+				<div
+					class="tiempo"
+					x-text="Math.ceil(tiempoRestante)"
+				></div>
+			</div>
+
+			<template x-if="pagina=='#'">
+				<section class="pagina" id="ninguna"></section>
+			</template>
+			<template x-if="pagina=='inicio'">
+				<section class="pagina" id="inicio">
+					<div class="box-logos">
+						<img
+							src="./img/visa/logo_trivia.svg"
+							width="700px"
+							alt=""
+							class="logo"
+						/>
+						<!-- <img
+							src="https://stringnetlab.com/msd/img/assets/logo-wt.svg"
+							width="480px"
+							alt=""
+							class="logo"
+						/> -->
+					</div>
+				</section>
+			</template>
+			<template x-if="pagina=='espera'">
+
+
+				<section class="pagina" id="espera">
+					<div class="contenedor">
+						<div class="trivia_marca">
+							<img src="/img/visa/logo_scotiabank.svg" alt="">
+						</div>
+						<div class="contenido">
+							<div class="logo-espera-qr">
+								<div x-html="invitacion" class="qr"></div>
+							</div>
+							<hgroup>
+								<h2>Escanea el QR</h2>
+								<h3>para empezar a jugar</h3>
+							</hgroup>
+						</div>
+						<div class="contenido">
+							<div class="titulares">
+								<h4><span>Instrucciones</span></h4>
+								<h5><span>¡Bienvenido al reto donde mandatu instinto futbolero!</span></h5>
+							</div>
+							<div class="textos">
+								<p>Mira atentamente la pregunta que proyectaremosen pantalla gigante.Selecciona tu respuesta en tu celular.</p>
+								<p>Recuerda: solo tienes <span x-text="segundos"></span> segundos para responder.</p>
+								<p>Cada ronda incluye 3 preguntas. </p>
+								<p>Cada acierto suma puntos.</p>
+								<p>Y ya sabes... ¡nada de mirar las respuestas del otro, eh!</p>
+							</div>
+						</div>
+					</div>
+
+				</section>
+			</template>
+			<template x-if="pagina=='carrera'">
+				<section class="pagina" id="carrera">
+					<div class="pista">
+						<img src="img/pista.png" alt="" class="pista__fondo" />
+						<div class="jugadores">
+							<template x-for="(jugador, id) in jugadores">
+								<div
+									class="jugador"
+									:class="[
+							jugador.etiqueta,
+							jugador.sexo,
+							avatares[id]?.pose,
+							avatares[id]?.avance,
+							]"
+								></div>
+							</template>
+						</div>
+					</div>
+				</section>
+			</template>
+
+			<template x-if="pagina=='pregunta'">
+				<section class="pagina" id="pregunta">
+					<div class="contenedor">
+						<div class="trivia_marca">
+							<img src="/img/visa/logo_scotiabank.svg" alt="">
+						</div>
+						<div
+							class="pregunta"
+							x-html="pregunta?.contenido"
+						></div>
+
+						<div class="opciones">
+							<template
+								x-for="(opcion, id) in pregunta?.respuestas"
+							>
+								<div class="opcion" :class="opcion === respuestaCorrecta ? 'correcta' : ''">
+									<span
+										class="letra"
+										x-text="letra(id).toLowerCase()"
+									></span>
+									<span class="texto" x-html="opcion"></span>
+								</div>
+							</template>
+						</div>
+
+						<template x-if="respuestaCorrecta">
+							<!-- <div class="respuesta" x-text="respuestaCorrecta"></div> -->
+						</template>
+					</div>
+				</section>
+			</template>
+			<template x-if="pagina=='podio'">
+				<section id="podio" class="pagina" x-ref="podio">
+					<div class="contenedor">
+						<div class="trivia_marca">
+							<img src="/img/visa/logo_scotiabank.svg" alt="">
+						</div>
+						<div class="grupo">
+							<div class="titulos">
+								<figure>
+									<img src="/img/visa/paco.svg" alt="">
+								</figure>
+								<div class="titulo">
+									Ranking
+								</div>
+							</div>
+							<div class="tabla">
+								<div class="tabla-posiciones">
+									<div class="tabla-header">
+										<span>#</span>
+										<span>Jugador</span>
+										<span>Pts</span>
+									</div>
+									<template x-for="(ganador, id) in ganadores" :key="ganador.etiqueta">
+										<div
+											class="tabla-fila"
+											:class="`puesto-${id+1}`"
+										>
+											<span class="posicion" x-text="id + 1"></span>
+											<span class="nombre" x-text="ganador.nombre.toUpperCase()"></span>
+											<span class="puntaje" x-text="ganador.puntaje"></span>
+										</div>
+									</template>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+					<canvas id="confetti"></canvas>
+				</section>
+			</template>
+
+			<template x-if="pagina!='#'">
+				<img class="marca" src="img/stringnet.svg" alt="" />
+			</template>
+		</div>
+	</body>
+	<script>
+		window.opcionesJuego = {
+			evento: "Elifarma",
+			modulo: "pantalla",
+			logo: false,
+			pantallas: {
+				inicio: {
+					fondo: false,
+				},
+				espera: {
+					fondo: false,
+				},
+				carrera: {
+					fondo: false,
+				},
+				pregunta: {
+					fondo: false,
+				},
+				podio: {
+					fondo: false,
+				},
+			},
+		};
+	</script>
+	<script src="env.js"></script>
+	<script type="module">
+		async function iniciar() {
+			try {
+				const configResp = await fetch('./config.json');
+				const config = await configResp.json();
+
+				window.opcionesJuego = {
+					...window.opcionesJuego,
+					...config
+				};
+			} catch (error) {
+				console.error('No se pudo cargar config.json:', error);
+			}
+
+			await import('./js/index.js');
+		}
+
+		iniciar();
+	</script>
+</html>

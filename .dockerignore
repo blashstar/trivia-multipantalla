@@ -1,0 +1,36 @@
+# Control de versiones
+.git
+.gitignore
+
+# Configuración de editores
+.vscode
+*.code-workspace
+
+# Documentación (no necesaria en runtime)
+docs
+
+# Archivos de respaldo y versiones antiguas
+*.bk*
+*.bk2
+*.bk3
+index.bk.html
+index___.html
+control copy.html
+js/juego.bk2.js
+js/juego.bk3.js
+js/util/firebase.bk.js
+js/util/firebase.bk2.js
+js/firebase.js
+
+# Notas y archivos temporales
+notas.txt
+
+# Variables de entorno (no incluir credenciales en la imagen)
+.env
+.env.*
+env.js
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore

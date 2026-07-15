@@ -1,0 +1,13 @@
+export default {
+	comando: "",
+	control: false,
+	juego: {
+		pagina: "inicio",
+		respuesta: "",
+		tiempo: "0.000"
+	},
+	mando: {
+		pagina: "inicio"
+	},
+	titulo: ""
+};

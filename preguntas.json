@@ -1,0 +1,170 @@
+[
+  {
+    "numero": 1,
+    "contenido": "¿Quién es el jugador peruano más famoso de la historia?",
+    "respuestas": ["Roberto Palacios", "Teófilo Cubillas", "Lolo Fernández", "Juan Carlos Oblitas"],
+    "correcta": 1
+  },
+  {
+    "numero": 2,
+    "contenido": "¿Qué jugador peruano es una leyenda en el futbol alemán?",
+    "respuestas": ["Paolo Guerrero", "Claudio Pizarro", "Hugo Sotil", "Jefferson Farfán"],
+    "correcta": 1
+  },
+  {
+    "numero": 3,
+    "contenido": "¿Qué jugador peruano es conocido como “el Capitán de América”?",
+    "respuestas": ["Zico", "Héctor Chumpitaz", "Pibe Valderrama", "Diego Armando Maradona"],
+    "correcta": 1
+  },
+  {
+    "numero": 4,
+    "contenido": "¿Quién es el máximo goleador histórico de la selección peruana?",
+    "respuestas": ["Perico León", "Teófilo Cubillas", "Paolo Guerrero", "Roberto Palacios"],
+    "correcta": 2
+  },
+  {
+    "numero": 5,
+    "contenido": "¿A qué selección se le conoce como “La naranja mecánica”?",
+    "respuestas": ["Senegal", "Costa de Marfil", "Países Bajos", "Noruega"],
+    "correcta": 2
+  },
+  {
+    "numero": 6,
+    "contenido": "¿A Quién se le conoce como “el Poeta de la Zurda”?",
+    "respuestas": ["Juan Carlos Oblitas", "César Cueto", "Juan Manuel Vargas", "Waldir Sáenz"],
+    "correcta": 1
+  },
+  {
+    "numero": 7,
+    "contenido": "¿Qué jugador peruano fue apodado como “El Jet”?",
+    "respuestas": ["Julio Cesar Uribe", "Jeronimo Barbadillo", "Juan José Muñante", "Franco Navarro"],
+    "correcta": 2
+  },
+  {
+    "numero": 8,
+    "contenido": "En el futbol internacional ¿A Quién se le conocía como “El Kaiser”?",
+    "respuestas": ["Daniel Pasarela", "Franz Beckenbauer", "Lothar Matthäus", "Thomas Muller"],
+    "correcta": 1
+  },
+  {
+    "numero": 9,
+    "contenido": "¿A qué jugador se le apodo “El Pelusa”?",
+    "respuestas": ["Mario Alberto Kempes", "Diego Armando Maradona", "Pablo Aimar", "René Hausmann"],
+    "correcta": 1
+  },
+  {
+    "numero": 10,
+    "contenido": "¿Cómo se llama el Estadio Nacional de Lima?",
+    "respuestas": ["Julio Lores Colán", "José Díaz", "Lolo Fernández", "Telmo Carbajo"],
+    "correcta": 1
+  },
+  {
+    "numero": 11,
+    "contenido": "¿A qué estadio le dicen “La Bombonera”?",
+    "respuestas": ["Estadio Antonio Vespucio Liberti", "Estadio Alberto J. Armando", "Estadio Mario Alberto Kempes", "Estadio Malvinas Argentinas"],
+    "correcta": 1
+  },
+  {
+    "numero": 12,
+    "contenido": "¿A quién le llamaban “El Peruano y su ballet”?",
+    "respuestas": ["Jaime Duarte", "Julio Melendez", "Ruben Díaz", "Nicolas Fuentes"],
+    "correcta": 1
+  },
+  {
+    "numero": 13,
+    "contenido": "¿A qué jugado le dicen “La Culebra”?",
+    "respuestas": ["Pedro Gallese", "Jefferson Farfán", "André Carrillo", "Sergio Peña"],
+    "correcta": 2
+  },
+  {
+    "numero": 14,
+    "contenido": "¿A qué futbolista peruano se le conoce por el apodo de “El Depredador”?",
+    "respuestas": ["Jefferson Farfán", "Paolo Guerrero", "Claudio Pizarro", "Roberto Palacios"],
+    "correcta": 1
+  },
+  {
+    "numero": 15,
+    "contenido": "¿Cuál es el verdadero nombre de Orejas Flores?",
+    "respuestas": ["Christian Flores", "Edward Flores", "Edison Flores", "Edgar Flores"],
+    "correcta": 2
+  },
+  {
+    "numero": 16,
+    "contenido": "¿Quién es el actual arquero titular de la selección peruana?",
+    "respuestas": ["Diego Penny", "Pedro Gallese", "Alejandro Duarte", "Carlos Cáceda"],
+    "correcta": 1
+  },
+  {
+    "numero": 17,
+    "contenido": "¿Cuál es el estadio con más capacidad en Sudamérica?",
+    "respuestas": ["Estadio Mãs Monumental de Buenos Aires", "Estadio Maracaná", "Estadio Azteca", "Estadio Alejandro Villanueva"],
+    "correcta": 0
+  },
+  {
+    "numero": 18,
+    "contenido": "¿A quién lo llaman el “Bombardero de los Andes”?",
+    "respuestas": ["Jefferson Farfán", "Christian Cueva", "Claudio Pizarro", "Luis Advíncula"],
+    "correcta": 2
+  },
+  {
+    "numero": 19,
+    "contenido": "¿Quién fue el primer futbolista peruano en salir a jugar al extranjero?",
+    "respuestas": ["Alejandro Villanueva", "Julio Lores", "Juan Seminario", "Jorge Alcalde"],
+    "correcta": 1
+  },
+  {
+    "numero": 20,
+    "contenido": "¿Qué edición de la Copa Mundial de la FIFA™ fue la primera en disputarse con un formato de todos contra todos en la fase final, sin partido de final único?",
+    "respuestas": ["Italia 1934", "Francia 1938", "Brasil 1950"],
+    "correcta": 2
+  },
+  {
+    "numero": 21,
+    "contenido": "¿Qué selección anotó el primer gol en la historia de la Copa Mundial de la FIFA™?",
+    "respuestas": ["Argentina", "Estados Unidos", "Francia"],
+    "correcta": 2
+  },
+  {
+    "numero": 22,
+    "contenido": "¿Quién fue el primer jugador en marcar un gol en dos finales distintas de la Copa Mundial de la FIFA™?",
+    "respuestas": ["Pelé", "Vavá", "Franz Beckenbauer"],
+    "correcta": 1
+  },
+  {
+    "numero": 23,
+    "contenido": "¿En qué edición de la Copa Mundial de la FIFA™ se utilizó por primera vez la tanda de penales para definir un campeón mundial?",
+    "respuestas": ["España 1982", "Italia 1990", "Alemania 2006"],
+    "correcta": 0
+  },
+  {
+    "numero": 24,
+    "contenido": "¿Cuál fue la primera Copa Mundial de la FIFA™ en la que participaron selecciones de todos los continentes habitados?",
+    "respuestas": ["Suecia 1958", "Chile 1962", "Inglaterra 1966"],
+    "correcta": 2
+  },
+  {
+    "numero": 25,
+    "contenido": "¿Qué árbitro mostró la primera tarjeta roja en la historia de la Copa Mundial de la FIFA™?",
+    "respuestas": ["Ken Aston", "Rudolf Kreitlein", "Kurt Tschenscher"],
+    "correcta": 1
+  },
+  {
+    "numero": 26,
+    "contenido": "¿En qué año se disputó la primera Copa Mundial de la FIFA™?",
+    "respuestas": ["1920", "1930", "1942"],
+    "correcta": 1
+  },
+  {
+    "numero": 27,
+    "contenido": "¿Cuál de los siguientes países ha sido campeón de la Copa Mundial de la FIFA™ en más ocasiones?",
+    "respuestas": ["Alemania", "Italia", "Brasil"],
+    "correcta": 2
+  },
+  {
+    "numero": 28,
+    "contenido": "¿Cuál es el slogan de Scotiabank?",
+    "respuestas": ["Vamos por más", "Tú puedes lograrlo", "Tienes más de lo que crees", "Siempre juntos"],
+    "correcta": 2
+  }
+]

@@ -1,0 +1,14 @@
+
+[
+  {
+    "numero": 1,
+    "contenido": "¿Qué edición de la Copa Mundial de la FIFA™ fue la primera en disputarse con un formato de todos contra todos en la fase final, sin partido de final único?",
+    "respuestas": [
+		"Estadio Mãs Monumental de Buenos Aires",
+		"Estadio Antonio Vespucio Liberti",
+		"Estadio Alejandro Villanueva",
+		"Estadio Mario Alberto Kempes"
+	],
+    "correcta": 1
+  }
+]

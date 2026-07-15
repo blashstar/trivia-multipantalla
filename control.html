@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es" x-data="$aplicacion">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title x-text="titulo">_</title>
+		<!-- UIkit CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.25.20/dist/css/uikit.min.css" />
+	</head>
+	<body>
+		<div class="uk-section uk-section-xsmall uk-section-muted">
+			<div class="uk-container uk-margin-bottom">
+				<h1 class="uk-heading-bullet uk-heading-divider">
+					<strong>Evento: </strong>
+					<span x-text="evento"></span>
+				</h1>
+			</div>
+			<div class="uk-container">
+				<div class="uk-flex uk-flex-middle">
+					<div class="uk-heading-bullet uk-margin-right" style="flex: 0 0 auto;">
+						<strong>Pantallas: </strong>
+					</div>
+					<div uk-margin>
+						<button
+							class="uk-button uk-button-primary"
+							@click="mostrarPantalla('#')"
+						>
+							<span>Ninguna</span>
+						</button>
+						<button
+							class="uk-button uk-button-primary"
+							@click="mostrarPantalla('inicio')"
+						>
+							<span>Inicio</span>
+						</button>
+						<button
+							class="uk-button uk-button-primary"
+							@click="mostrarPantalla('espera')"
+						>
+							<span>Espera</span>
+						</button>
+						<button
+							class="uk-button uk-button-primary"
+							@click="mostrarPantalla('carrera')"
+						>
+							<span>Carrera</span>
+						</button>
+						<button
+							class="uk-button uk-button-primary"
+							@click="mostrarPantalla('podio')"
+						>
+							<span>Podio</span>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="uk-section uk-section-default">
+			<div class="uk-container">
+				<ul uk-tab>
+					<li class="uk-active"><a href="#">Jugadores</a></li>
+					<li class=""><a href="#">Preguntas</a></li>
+					<li class=""><a href="#">Juego</a></li>
+				</ul>
+				<div class="uk-switcher uk-margin">
+					<div>
+						<h3>Jugadores</h3>
+						<!-- <button
+							class="uk-button uk-button-danger"
+							@click="reiniciarJugadores"
+						>
+							Reiniciar Jugadores
+						</button>
+						<hr /> -->
+
+						<div
+							class="uk-grid-match uk-child-width-1-2 uk-child-width-1-3@s"
+							uk-grid
+							x-show="jugadores?.length > 0"
+						>
+							<template x-for="(jugador, id) in jugadores" hidden>
+								<div>
+									<h4
+										x-text="`Jugador ${jugador.etiqueta}`"
+									></h4>
+									<div>
+										<strong>Nombre:</strong>
+										<span x-text="jugador.nombre"></span>
+									</div>
+									<div>
+										<strong>Puntaje:</strong>
+										<span x-text="jugador.puntaje"></span>
+									</div>
+									<div>
+										<strong>Tiempo:</strong>
+										<span x-text="jugador.tiempo"></span>
+									</div>
+									<div>
+										<strong>Respuesta:</strong>
+										<span x-text="jugador.respuesta"></span>
+									</div>
+									<!-- <div>
+										<button
+											class="uk-button uk-button-danger"
+											@click="reiniciarJugador(id)"
+											x-text="`Reiniciar Jugador ${jugador.etiqueta}`"
+										></button>
+									</div> -->
+								</div>
+							</template>
+						</div>
+					</div>
+					<div>
+						<h3>Preguntas</h3>
+						<div
+							class="preguntas uk-grid-small uk-grid-match uk-child-width-1-2 uk-child-width-1-3@s"
+							uk-grid
+						>
+							<template x-for="pregunta in disponibles" hidden>
+								<div>
+
+									<div
+										x-data="pregunta"
+										class="uk-card uk-card-small uk-card-default"
+									>
+										<div class="uk-card-header">
+											<h4>
+												<span x-html="numero"></span>.
+												<span x-html="contenido"></span>
+											</h4>
+										</div>
+										<div class="uk-card-body">
+											<ol type="a">
+												<template
+													x-for="respuesta in respuestas"
+												>
+													<li x-html="respuesta"></li>
+												</template>
+											</ol>
+										</div>
+										<div class="uk-card-footer">
+											<span>Correcta:</span>
+											<strong
+												x-html="letra(correcta).toLowerCase()"
+											></strong>
+											<span>) </span>
+											<em
+												x-html="respuestas[correcta]"
+											></em>
+										</div>
+									</div>
+								</div>
+							</template>
+						</div>
+					</div>
+					<div>
+						<h3>Juego</h3>
+						<div class="uk-flex uk-margin">
+							<div
+								class="uk-card uk-card-default uk-card-small uk-card-body"
+							>
+								<strong>Tiempo Maximo</strong>
+								<span x-text="segundos"></span>
+							</div>
+							<div
+								class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-left"
+							>
+								<strong>Tiempo</strong>
+								<span x-text="tiempo"></span>
+							</div>
+							<div
+								class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-left"
+							>
+								<strong>Tiempo Restante</strong>
+								<span x-text="tiempoRestante"></span>
+							</div>
+						</div>
+						<div class="uk-margin" uk-margin>
+							<!-- <button
+								class="uk-button uk-button-secondary"
+								@click="seleccionarPregunta()"
+							>
+								<span>Seleccionar Pregunta</span>
+							</button> -->
+							<button
+								class="uk-button uk-button-secondary"
+								@click="mostrarPregunta()"
+							>
+								<span>Mostrar Pregunta</span>
+							</button>
+							<!-- <button
+								class="uk-button uk-button-secondary"
+								@click="iniciarConteo()"
+							>
+								<span>Iniciar Conteo</span>
+							</button> -->
+							<button
+								class="uk-button uk-button-secondary"
+								@click="mostrarRespuesta()"
+							>
+								<span>Mostrar Respuesta</span>
+							</button>
+							<button
+								class="uk-button uk-button-secondary"
+								@click="ocultarRespuesta()"
+							>
+								<span>Ocultar Respuesta</span>
+							</button>
+							<!-- <button
+								class="uk-button uk-button-secondary"
+								@click="evaluarRespuestas()"
+							>
+								<span>evaluarRespuestas</span>
+							</button> -->
+							<button
+								class="uk-button uk-button-danger"
+								@click="reiniciarJuego()"
+							>
+								<span>Reiniciar Juego</span>
+							</button>
+						</div>
+
+						<div
+							class="preguntas uk-grid-match uk-child-width-1-1 uk-child-width-1-2@s"
+							uk-grid
+						>
+							<div
+								class="uk-card uk-card-default"
+								x-show="pregunta"
+							>
+								<div class="uk-card-header">
+									<h3
+										class="uk-card-title"
+										x-html="pregunta?.contenido ?? ''"
+									></h3>
+								</div>
+								<div class="uk-card-body">
+									<ol type="a">
+										<template
+											x-for="respuesta in pregunta?.respuestas"
+										>
+											<li x-html="respuesta"></li>
+										</template>
+									</ol>
+								</div>
+								<div class="uk-card-footer">
+									<strong>Respuesta Correcta:</strong>
+									<span
+										x-html="pregunta?.respuestas[pregunta?.correcta]"
+									></span>
+								</div>
+							</div>
+
+							<div
+								class="uk-card uk-card-default"
+								x-show="pregunta"
+							>
+								<div class="uk-card-header">
+									<h3 class="uk-card-title">Respuestas</h3>
+								</div>
+								<div class="uk-card-body">
+									<ul
+										class="uk-list uk-list-divider uk-list-medium"
+									>
+										<template x-for="jugador in respuestas">
+											<li>
+												<strong
+													x-html="jugador.etiqueta"
+												></strong>
+												<span
+													class="uk-width-small uk-display-inline-block"
+													x-html="jugador.nombre"
+												></span>
+
+												<strong
+													class="uk-width-small"
+													x-html="letra(jugador.respuesta).toLowerCase()"
+												></strong>
+												<span
+													class="uk-badge"
+													x-html="jugador.tiempo"
+												></span>
+											</li>
+										</template>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<!-- UIkit JS -->
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.25.20/dist/js/uikit.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/uikit@3.25.20/dist/js/uikit-icons.min.js"></script>
+	<script>
+		// Fallback mínimo en caso de que los JSON no carguen
+		window.opcionesJuego = {
+			evento: "prueba",
+			modulo: "control",
+			segundos: 0,
+			preguntas: []
+		};
+	</script>
+	<script src="env.js"></script>
+	<script type="module">
+		async function iniciar() {
+			try {
+				const [configResp, preguntasResp] = await Promise.all([
+					fetch('./config.json'),
+					fetch('./preguntas.json')
+				]);
+				const config = await configResp.json();
+				const preguntas = await preguntasResp.json();
+
+				window.opcionesJuego = {
+					...window.opcionesJuego,
+					...config,
+					preguntas
+				};
+			} catch (error) {
+				console.error('No se pudieron cargar los archivos de configuración:', error);
+			}
+
+			await import('./js/control.js');
+		}
+
+		iniciar();
+	</script>
+</html>

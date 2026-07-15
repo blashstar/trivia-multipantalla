@@ -1,0 +1,36 @@
+# Variables de entorno y configuración generada en runtime
+.env
+.env.*
+env.js
+
+# Dependencias (por si se agregan en el futuro)
+node_modules
+
+# Control de versiones
+.git
+
+# Configuración de editores
+.vscode
+*.code-workspace
+.idea
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de respaldo y versiones antiguas
+*.bk*
+*.bk2
+*.bk3
+index.bk.html
+index___.html
+control copy.html
+js/juego.bk2.js
+js/juego.bk3.js
+js/util/firebase.bk.js
+js/util/firebase.bk2.js
+js/firebase.js
+
+# Notas y archivos temporales
+notas.txt
+*.log
