@@ -220,9 +220,50 @@
 					<canvas id="confetti"></canvas>
 				</section>
 			</template>
+			<template x-if="pagina=='puntajes'">
+				<section id="puntajes" class="pagina" x-ref="puntajes">
+					<div class="contenedor">
+						<div class="trivia_marca">
+							<img src="/img/visa/logo_scotiabank.svg" alt="">
+						</div>
+						<div class="grupo">
+							<div class="titulos">
+								<figure>
+									<img src="/img/visa/paco.svg" alt="">
+								</figure>
+								<div class="titulo">
+									Ranking
+								</div>
+							</div>
+							<div class="tabla">
+								<div class="tabla-posiciones">
+									<div class="tabla-header">
+										<span>#</span>
+										<span>Jugador</span>
+										<span>Pts</span>
+									</div>
+									<template x-for="(ganador, id) in ganadores" :key="ganador.etiqueta">
+										<div
+											class="tabla-fila"
+											:class="`puesto-${id+1}`"
+										>
+											<span class="posicion" x-text="id + 1"></span>
+											<span class="nombre" x-text="ganador.nombre.toUpperCase()"></span>
+											<span class="puntaje" x-text="ganador.puntaje"></span>
+										</div>
+									</template>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+					<canvas id="confetti"></canvas>
+				</section>
+			</template>
 
 			<template x-if="pagina!='#'">
-				<img class="marca" src="img/stringnet.svg" alt="" />
+				<!-- <img class="marca" src="img/stringnet.svg" alt="" /> -->
 			</template>
 		</div>
 	</body>
@@ -245,6 +286,9 @@
 					fondo: false,
 				},
 				podio: {
+					fondo: false,
+				},
+				puntajes: {
 					fondo: false,
 				},
 			},

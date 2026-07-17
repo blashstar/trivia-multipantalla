@@ -421,12 +421,37 @@
 
 
 #pregunta .opcion.correcta{
-	background-color: black;
+	/* background-color: #f80823; */
 	color: white;
 	border-radius: 2rem;
 	border-radius: 72px;
+	animation: latido 1.2s ease-in-out infinite;
 }
 
+@keyframes latido {
+	0%, 100% {
+		transform: scale(1);
+	}
+	14% {
+		transform: scale(1.06);
+	}
+	28% {
+		transform: scale(1);
+	}
+	42% {
+		transform: scale(1.06);
+	}
+	56% {
+		transform: scale(1);
+	}
+}
+
+
+#pregunta .opcion.correcta .texto{
+	background-color: #f80823;
+	color: white;
+	outline: 3px solid white;
+}
 
 #pregunta .opcion .letra{
 	border-radius: 999px;
@@ -873,6 +898,280 @@
 }
 
 #podio .grupo .titulos .titulo{
+	background-color: #fff;
+	color: black;
+	font-size: 3rem;
+	line-height: 1;
+	padding: .5em 1.5em;
+	text-align: center;
+	border-radius: 3em;
+}
+
+/* =========================================================
+   Puntajes - copia exacta de Podio
+   ========================================================= */
+
+/*
+#puntajes .encabezado{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	justify-content: center;
+}*/
+
+#puntajes .plataforma{
+	position: absolute;
+	bottom: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	display: block;
+	max-width: 60%;
+}
+
+
+#puntajes .plataforma__fondo{
+	display: block;
+	width: 100%;
+	max-height: 40vh;
+}
+
+#puntajes .ganador{
+	display: block;
+	width: 25%;
+	transform: translateX(-50%);
+	position: absolute;
+}
+
+#puntajes .ganador .nombre{
+	position: absolute;
+	bottom: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #001f8e;
+	color: white;
+	padding: 0.5em 1em;
+	text-align: center;
+	margin-bottom: 0.5em;
+	border-radius: .5em;
+	font-weight: bold;
+	/* max-width: 200%; */
+	/* text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden; */
+}
+
+/*
+#puntajes .ganador .nombre::after{
+	content: '';
+	position: absolute;
+	bottom: -0.5em;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0;
+	height: 0;
+	border-left: 0.5em solid transparent;
+	border-right: 0.5em solid transparent;
+	border-top: 0.5em solid black;
+}*/
+
+
+#puntajes .puesto-2 .nombre{
+	top: 0;
+	left: -37%;
+	right: auto;
+	bottom: auto;
+	transform: none;
+	margin-left: 0.5em;
+	margin-bottom: 0;
+}
+
+#puntajes .puesto-2 .nombre::after{
+	left: -0.5em;
+	top: 50%;
+	transform: translateY(-50%);
+	border-top: 0.5em solid transparent;
+	border-bottom: 0.5em solid transparent;
+	border-right: 0.5em solid black;
+	border-left: none;
+}
+
+#puntajes .puesto-3 .nombre{
+	top: 0;
+	left: auto;
+	right: -21%;
+	bottom: auto;
+	transform: none;
+	/* margin-right: 0.5em; */
+	margin-bottom: 0;
+}
+
+#puntajes .puesto-3 .nombre::after{
+	right: -0.5em;
+	left: auto;
+	top: 50%;
+	transform: translateY(-50%);
+	border-top: 0.5em solid transparent;
+	border-bottom: 0.5em solid transparent;
+	border-left: 0.5em solid black;
+	border-right: none;
+}
+
+#puntajes .ganador img{
+	display: block;
+	width: 100%;
+	max-height: 50vh;
+}
+
+#puntajes .puesto-1{
+	bottom: 90%;
+	left: 50%;
+}
+
+#puntajes .puesto-2{
+	bottom: 72%;
+	left: 18%;
+}
+
+#puntajes .puesto-3{
+	bottom: 59%;
+	left: 79%;
+}
+
+#puntajes .podio-contenido {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	padding: 2rem;
+	gap: 2rem;
+	position: relative;
+	z-index: 1;
+}
+
+#puntajes .podio-titulo {
+	font-size: 4rem;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+	margin: 0;
+	text-align: center;
+}
+
+#puntajes .tabla-posiciones {
+	background-color: #fff;
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	align-content: start;
+	gap: 0 2rem;
+	padding: 3rem;
+	border-radius: 3rem;
+	height: 100%;
+
+}
+
+#puntajes .tabla-header,
+#puntajes .tabla-fila {
+	grid-column: 1/-1;
+	display: grid;
+	grid-template-columns: subgrid;
+	padding: 1rem 0;
+	text-align: left;
+	align-items: center;
+	font-size: 2.5rem;
+}
+
+#puntajes .tabla-header {
+	color: #000;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	border-bottom: 5px solid #F80823;
+	padding: 1.5rem 0;
+}
+
+#puntajes .tabla-fila {
+	border-bottom: 5px solid #000000;
+	color: #000;
+	padding: 2rem 0;
+	line-height: 1.25;
+}
+
+#puntajes .tabla-fila:last-child {
+	/* border-bottom: none; */
+}
+
+#puntajes .tabla-fila.puesto-1 {
+	/* background: linear-gradient(90deg, #ffd700 0%, #ffec8b 100%); */
+	/* font-weight: bold; */
+}
+
+#puntajes .tabla-fila.puesto-2 {
+	/* background: linear-gradient(90deg, #c0c0c0 0%, #e8e8e8 100%); */
+}
+
+#puntajes .tabla-fila.puesto-3 {
+	/* background: linear-gradient(90deg, #cd7f32 0%, #e6ac7a 100%); */
+}
+
+#puntajes .tabla-fila .posicion {
+	font-size: 2.5rem;
+	font-weight: bold;
+}
+
+#puntajes .tabla-fila .etiqueta {
+	font-weight: bold;
+	color: #001f8e;
+}
+
+#puntajes .tabla-fila .nombre {
+	text-align: left;
+	/* padding-left: 1rem; */
+}
+
+#puntajes .tabla-fila .puntaje {
+	font-weight: bold;
+	color: #F80823;
+	text-align: right;
+}
+
+#puntajes #confetti {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index: 2;
+}
+
+#puntajes .grupo{
+	align-self: stretch;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 2fr 3fr;
+	grid-template-rows: 1fr;
+	gap: 2rem;
+	align-items: stretch;
+
+}
+
+#puntajes .grupo .titulos{
+	/* flex: 1 1 auto; */
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 2rem;
+}
+
+#puntajes .grupo .tabla{
+	/* flex: 1 1 auto; */
+}
+
+#puntajes .grupo .titulos .titulo{
 	background-color: #fff;
 	color: black;
 	font-size: 3rem;

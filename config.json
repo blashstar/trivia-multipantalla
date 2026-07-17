@@ -18,6 +18,9 @@
     },
     "podio": {
       "fondo": "false"
+    },
+    "puntajes": {
+      "fondo": "false"
     }
   },
   "imagenes": {

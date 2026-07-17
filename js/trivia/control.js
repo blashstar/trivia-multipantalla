@@ -91,6 +91,13 @@ export default {
 		// console.log('nombre', nombre);
 
 		switch(nombre){
+			case "puntajes":
+				_.forEach(this.jugadores, (jugador, id) => {
+					this.firebase.actualizar(`jugadores/${id}/pagina`, 'espera');
+				});
+				const audioPuntajes = new Audio("snd/celebra.mp3");
+				audioPuntajes.play();
+			break;
 			case "pregunta":
 				_.forEach(this.jugadores, (jugador, id) => {
 					this.firebase.actualizar(`jugadores/${id}/pagina`, 'pregunta');

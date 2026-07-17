@@ -8,7 +8,7 @@ export default {
 	titulo: "Juego",
 	evento: "demo",
 	modulo: "mando",
-	pagina : "#",
+	pagina : "nombre",
 
 	maximoJugadores: 3,
 	jugadores: 0,
@@ -74,9 +74,7 @@ export default {
 		// 		this.tiempo = 0;
 		// 		this.navegar("pregunta");
 		// 	}
-		// });
-
-
+		// })
 
 		if(this.jugador){
 			this.conectar();
@@ -85,7 +83,7 @@ export default {
 		// 	this.navegar("no");
 		// }
 		else{
-			this.navegar("inicio");
+			this.navegar("nombre");
 
 			this.firebase.vigilar("jugadores", snapshot => {
 				this.jugadores = snapshot.size;
@@ -223,7 +221,7 @@ export default {
 			// else{
 			// 	this.navegar(pagina);
 			// }
-			// console.log("pagina", pagina);
+			console.log("pagina", pagina);
 
 			switch(this.pagina){
 				case "espera":
