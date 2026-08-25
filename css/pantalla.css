@@ -151,8 +151,8 @@
 
 #cronometro{
 	position: absolute;
-	top: 50px;
-	left: 80px;
+    top: 10px;
+    right: 80px;
 	padding: 0.5rem 1.5rem;
 	z-index: 1;
 	border-radius: 3rem;
@@ -341,27 +341,27 @@
 
 
 #aplicacion #pregunta .contenedor{
-	flex-direction: column;
-	padding: 4rem 100px;
-	gap: 4rem;
+	gap: 75px;
 }
 
 #pregunta .pregunta{
-	font-size: 54px;
+	font-size: 48px;
+	font-weight: 600;
 	background: none;
 	color: white;
 	line-height: 1.3;
 	text-align: center;
 	max-width: 75vw;
 	text-wrap: balance;
-
+	flex: 1 1 50%;
 }
 
 
 #pregunta .opciones{
 	display: flex;
-	flex-direction: row;
-	gap: 48px;
+	flex-direction: column;
+	gap: 16px;
+	flex: 1 1 50%;
 }
 
 #pregunta .opcion{
@@ -369,13 +369,13 @@
 	background: none;
 	color: #fff;
 	font-weight: bold;
-	padding: 8px;
+	padding: 16px 20px;
 	text-align: left;
 	font-size: 22px;
 	position: relative;
 	min-height: 80px;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	gap: 1rem;
 	align-items: center;
 	justify-content: stretch;
@@ -383,9 +383,8 @@
 
 
 #pregunta .opcion.correcta{
+	background-color: #FFCB00;
 	color: white;
-	border-radius: 2rem;
-	border-radius: 72px;
 	animation: latido 1.2s ease-in-out infinite;
 }
 
@@ -407,11 +406,16 @@
 	}
 }
 
+#pregunta .opcion.correcta .letra{
+	background-color: white;
+	color: #1434CB;
+	text-align: left;
+}
 
 #pregunta .opcion.correcta .texto{
-	background-color: var(--color-primario);
-	color: white;
-	outline: 3px solid white;
+	background-color: transparent;
+	color: #1434CB;
+	text-align: left;
 }
 
 #pregunta .opcion .letra{
@@ -422,7 +426,6 @@
 	color: #fff;
 	font-weight: bold;
 	font-size: 60px;
-	background-color: black;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -433,13 +436,11 @@
 #pregunta .opcion .texto{
 	flex: 1 1 100%;
 	display: block;
-	background-color: white;
-	color: black;
-	text-align: center;
-	font-size: 36px;
+	color: white;
+	text-align: left;
+	font-size: 40px;
 	line-height: 1.2;
-	padding: 1rem 3rem;
-	border-radius: 72px;
+	padding: 1rem 0;
 
 }
 

@@ -1,5 +1,5 @@
 {
-  "evento": "visa-scotiabank",
+  "evento": "visa-trivia",
   "segundos": 15,
   "logo": "img/visa-agosto/logo_trivia.svg",
   "urlJugadores": "/jugar.html",
