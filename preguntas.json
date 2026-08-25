@@ -1,170 +1,405 @@
 [
   {
-    "numero": 1,
-    "contenido": "¿Quién es el jugador peruano más famoso de la historia?",
-    "respuestas": ["Roberto Palacios", "Teófilo Cubillas", "Lolo Fernández", "Juan Carlos Oblitas"],
-    "correcta": 1
+    "numero": 29,
+    "contenido": "¿Cuáles son las etapas del journey viajero cubiertas por Visa?",
+    "respuestas": [
+      "Antes y después del viaje.",
+      "Antes y durante el viaje.",
+      "En el aeropuerto y durante el viaje.",
+      "Todas las anteriores."
+    ],
+    "correcta": 3
   },
   {
-    "numero": 2,
-    "contenido": "¿Qué jugador peruano es una leyenda en el futbol alemán?",
-    "respuestas": ["Paolo Guerrero", "Claudio Pizarro", "Hugo Sotil", "Jefferson Farfán"],
-    "correcta": 1
-  },
-  {
-    "numero": 3,
-    "contenido": "¿Qué jugador peruano es conocido como “el Capitán de América”?",
-    "respuestas": ["Zico", "Héctor Chumpitaz", "Pibe Valderrama", "Diego Armando Maradona"],
-    "correcta": 1
-  },
-  {
-    "numero": 4,
-    "contenido": "¿Quién es el máximo goleador histórico de la selección peruana?",
-    "respuestas": ["Perico León", "Teófilo Cubillas", "Paolo Guerrero", "Roberto Palacios"],
-    "correcta": 2
-  },
-  {
-    "numero": 5,
-    "contenido": "¿A qué selección se le conoce como “La naranja mecánica”?",
-    "respuestas": ["Senegal", "Costa de Marfil", "Países Bajos", "Noruega"],
-    "correcta": 2
-  },
-  {
-    "numero": 6,
-    "contenido": "¿A Quién se le conoce como “el Poeta de la Zurda”?",
-    "respuestas": ["Juan Carlos Oblitas", "César Cueto", "Juan Manuel Vargas", "Waldir Sáenz"],
-    "correcta": 1
-  },
-  {
-    "numero": 7,
-    "contenido": "¿Qué jugador peruano fue apodado como “El Jet”?",
-    "respuestas": ["Julio Cesar Uribe", "Jeronimo Barbadillo", "Juan José Muñante", "Franco Navarro"],
-    "correcta": 2
-  },
-  {
-    "numero": 8,
-    "contenido": "En el futbol internacional ¿A Quién se le conocía como “El Kaiser”?",
-    "respuestas": ["Daniel Pasarela", "Franz Beckenbauer", "Lothar Matthäus", "Thomas Muller"],
-    "correcta": 1
-  },
-  {
-    "numero": 9,
-    "contenido": "¿A qué jugador se le apodo “El Pelusa”?",
-    "respuestas": ["Mario Alberto Kempes", "Diego Armando Maradona", "Pablo Aimar", "René Hausmann"],
-    "correcta": 1
-  },
-  {
-    "numero": 10,
-    "contenido": "¿Cómo se llama el Estadio Nacional de Lima?",
-    "respuestas": ["Julio Lores Colán", "José Díaz", "Lolo Fernández", "Telmo Carbajo"],
-    "correcta": 1
-  },
-  {
-    "numero": 11,
-    "contenido": "¿A qué estadio le dicen “La Bombonera”?",
-    "respuestas": ["Estadio Antonio Vespucio Liberti", "Estadio Alberto J. Armando", "Estadio Mario Alberto Kempes", "Estadio Malvinas Argentinas"],
-    "correcta": 1
-  },
-  {
-    "numero": 12,
-    "contenido": "¿A quién le llamaban “El Peruano y su ballet”?",
-    "respuestas": ["Jaime Duarte", "Julio Melendez", "Ruben Díaz", "Nicolas Fuentes"],
-    "correcta": 1
-  },
-  {
-    "numero": 13,
-    "contenido": "¿A qué jugado le dicen “La Culebra”?",
-    "respuestas": ["Pedro Gallese", "Jefferson Farfán", "André Carrillo", "Sergio Peña"],
-    "correcta": 2
-  },
-  {
-    "numero": 14,
-    "contenido": "¿A qué futbolista peruano se le conoce por el apodo de “El Depredador”?",
-    "respuestas": ["Jefferson Farfán", "Paolo Guerrero", "Claudio Pizarro", "Roberto Palacios"],
-    "correcta": 1
-  },
-  {
-    "numero": 15,
-    "contenido": "¿Cuál es el verdadero nombre de Orejas Flores?",
-    "respuestas": ["Christian Flores", "Edward Flores", "Edison Flores", "Edgar Flores"],
-    "correcta": 2
-  },
-  {
-    "numero": 16,
-    "contenido": "¿Quién es el actual arquero titular de la selección peruana?",
-    "respuestas": ["Diego Penny", "Pedro Gallese", "Alejandro Duarte", "Carlos Cáceda"],
-    "correcta": 1
-  },
-  {
-    "numero": 17,
-    "contenido": "¿Cuál es el estadio con más capacidad en Sudamérica?",
-    "respuestas": ["Estadio Mãs Monumental de Buenos Aires", "Estadio Maracaná", "Estadio Azteca", "Estadio Alejandro Villanueva"],
+    "numero": 30,
+    "contenido": "¿Qué beneficio ayuda al cliente a planear y gestionar reservas antes de viajar?",
+    "respuestas": [
+      "Visa Concierge",
+      "Visa Destinations",
+      "Visa Luxury Hotel Collection"
+    ],
     "correcta": 0
   },
   {
-    "numero": 18,
-    "contenido": "¿A quién lo llaman el “Bombardero de los Andes”?",
-    "respuestas": ["Jefferson Farfán", "Christian Cueva", "Claudio Pizarro", "Luis Advíncula"],
+    "numero": 31,
+    "contenido": "¿Qué beneficio ofrece acceso a más de 900 hoteles y resorts alrededor del mundo?",
+    "respuestas": [
+      "Visa Concierge",
+      "Visa Destinations",
+      "Visa Luxury Hotel Collection."
+    ],
     "correcta": 2
   },
   {
-    "numero": 19,
-    "contenido": "¿Quién fue el primer futbolista peruano en salir a jugar al extranjero?",
-    "respuestas": ["Alejandro Villanueva", "Julio Lores", "Juan Seminario", "Jorge Alcalde"],
+    "numero": 32,
+    "contenido": "¿Qué beneficio permite al cliente acceder a experiencias y descuentos exclusivos en destino?",
+    "respuestas": [
+      "Visa Concierge",
+      "Visa Destinations.",
+      "Visa Luxury Hotel Collection"
+    ],
     "correcta": 1
   },
   {
-    "numero": 20,
-    "contenido": "¿Qué edición de la Copa Mundial de la FIFA™ fue la primera en disputarse con un formato de todos contra todos en la fase final, sin partido de final único?",
-    "respuestas": ["Italia 1934", "Francia 1938", "Brasil 1950"],
-    "correcta": 2
-  },
-  {
-    "numero": 21,
-    "contenido": "¿Qué selección anotó el primer gol en la historia de la Copa Mundial de la FIFA™?",
-    "respuestas": ["Argentina", "Estados Unidos", "Francia"],
-    "correcta": 2
-  },
-  {
-    "numero": 22,
-    "contenido": "¿Quién fue el primer jugador en marcar un gol en dos finales distintas de la Copa Mundial de la FIFA™?",
-    "respuestas": ["Pelé", "Vavá", "Franz Beckenbauer"],
+    "numero": 33,
+    "contenido": "¿Qué beneficio permite recuperar impuestos de compras realizadas en Europa?",
+    "respuestas": [
+      "Tax Refund Plus",
+      "Global Blue.",
+      "Europe Shopping Rewards"
+    ],
     "correcta": 1
   },
   {
-    "numero": 23,
-    "contenido": "¿En qué edición de la Copa Mundial de la FIFA™ se utilizó por primera vez la tanda de penales para definir un campeón mundial?",
-    "respuestas": ["España 1982", "Italia 1990", "Alemania 2006"],
+    "numero": 34,
+    "contenido": "¿Cuál es la cobertura del seguro de emergencia médica internacional?",
+    "respuestas": [
+      "Hasta USD 150.000 para Visa Infinite y Signature; hasta USD 70.000 para Visa Platinum.",
+      "Hasta USD 200.000 para Visa Infinite y Signature; hasta USD 100.000 para Visa Platinum.",
+      "Hasta USD 250.000 para Visa Infinite y Signature; hasta USD 170.000 para Visa Platinum."
+    ],
+    "correcta": 2
+  },
+  {
+    "numero": 35,
+    "contenido": "¿El beneficio de upgrade de habitación en Visa Luxury Hotel Collection está garantizado para todos los huéspedes?",
+    "respuestas": [
+      "No. Está sujeto a disponibilidad del hotel al momento del check-in.",
+      "Sí. Todos los huéspedes reciben automáticamente un upgrade al realizar la reserva.",
+      "Sí. El upgrade está garantizado en todos los hoteles participantes sin restricciones."
+    ],
     "correcta": 0
   },
   {
-    "numero": 24,
-    "contenido": "¿Cuál fue la primera Copa Mundial de la FIFA™ en la que participaron selecciones de todos los continentes habitados?",
-    "respuestas": ["Suecia 1958", "Chile 1962", "Inglaterra 1966"],
+    "numero": 36,
+    "contenido": "¿Cuál es la aplicación desde donde se gestionan los beneficios aeroportuarios de Visa?",
+    "respuestas": [
+      "Visa Concierge",
+      "Visa Destinations",
+      "Visa Airport Companion"
+    ],
     "correcta": 2
   },
   {
-    "numero": 25,
-    "contenido": "¿Qué árbitro mostró la primera tarjeta roja en la historia de la Copa Mundial de la FIFA™?",
-    "respuestas": ["Ken Aston", "Rudolf Kreitlein", "Kurt Tschenscher"],
+    "numero": 37,
+    "contenido": "¿Cuántos salones de aeropuerto están disponibles en Visa Airport Companion?",
+    "respuestas": [
+      "990 salones",
+      "1221 salones.",
+      "1300 salones"
+    ],
     "correcta": 1
   },
   {
-    "numero": 26,
-    "contenido": "¿En qué año se disputó la primera Copa Mundial de la FIFA™?",
-    "respuestas": ["1920", "1930", "1942"],
+    "numero": 38,
+    "contenido": "¿Cuántos restaurantes hacen parte de la red de Visa Airport Companion?",
+    "respuestas": [
+      "850 restaurantes.",
+      "1050 restaurantes.",
+      "1.077 restaurantes."
+    ],
+    "correcta": 2
+  },
+  {
+    "numero": 39,
+    "contenido": "¿En cuántos países tiene presencia Visa Airport Companion?",
+    "respuestas": [
+      "120 países",
+      "141 países.",
+      "171 países"
+    ],
     "correcta": 1
   },
   {
-    "numero": 27,
-    "contenido": "¿Cuál de los siguientes países ha sido campeón de la Copa Mundial de la FIFA™ en más ocasiones?",
-    "respuestas": ["Alemania", "Italia", "Brasil"],
+    "numero": 40,
+    "contenido": "¿Qué beneficio permite evitar filas en los controles de seguridad del aeropuerto?",
+    "respuestas": [
+      "Fast Track.",
+      "Visa Airport Companion.",
+      "Visa Concierge."
+    ],
+    "correcta": 0
+  },
+  {
+    "numero": 41,
+    "contenido": "¿Para qué categoría de tarjeta aplica Fast Track?",
+    "respuestas": [
+      "Visa Signature",
+      "Visa Platinum",
+      "Visa Infinite."
+    ],
     "correcta": 2
   },
   {
-    "numero": 28,
-    "contenido": "¿Cuál es el slogan de Scotiabank?",
-    "respuestas": ["Vamos por más", "Tú puedes lograrlo", "Tienes más de lo que crees", "Siempre juntos"],
+    "numero": 42,
+    "contenido": "¿Qué debe hacer un cliente para activar los beneficios de Visa Airport Companion?",
+    "respuestas": [
+      "Llamar a la central de Visa",
+      "No se necesita activar.",
+      "Descargar la app, crear una cuenta y registrar su tarjeta elegible."
+    ],
     "correcta": 2
+  },
+  {
+    "numero": 43,
+    "contenido": "¿Qué programas tienen acceso al Visa Infinite Lounge?",
+    "respuestas": [
+      "Visa Airport Companion y Priority Pass.",
+      "Visa Airport Companion y LoungeKey.",
+      "Todas las anteriores."
+    ],
+    "correcta": 2
+  },
+  {
+    "numero": 44,
+    "contenido": "¿Tenemos algún beneficio que proteja al cliente ante la cancelación de vuelo?",
+    "respuestas": [
+      "No hay ningún beneficio de Cancelación de Viaje.",
+      "Verdadero. Existe el beneficio de Cancelaciónn de Viaje.",
+      "La protección solo cubre retrasos, no cancelaciones."
+    ],
+    "correcta": 1
+  },
+  {
+    "numero": 45,
+    "contenido": "¿Cuál es el plazo máximo para reportar un reclamo por cancelación de viaje?",
+    "respuestas": [
+      "Al día siguiente al incidente.",
+      "1 semana posterior al incidente.",
+      "30 días posteriores al incidente."
+    ],
+    "correcta": 2
+  },
+  {
+    "numero": 46,
+    "contenido": "¿Después de cuántas horas de retraso aplica el seguro de demora de vuelo?",
+    "respuestas": [
+      "Más de 4 horas.",
+      "Más de 6 horas.",
+      "Más de 12 horas."
+    ],
+    "correcta": 0
+  },
+  {
+    "numero": 47,
+    "contenido": "¿Qué situaciones pueden originar una cobertura por demora de vuelo?",
+    "respuestas": [
+      "Condiciones climáticas.",
+      "Huelgas.",
+      "Fallas del transportista.",
+      "Todas las anteriores."
+    ],
+    "correcta": 3
+  },
+  {
+    "numero": 48,
+    "contenido": "¿Qué beneficio protege al cliente cuando pierde una conexión aérea?",
+    "respuestas": [
+      "Seguro de Pérdida de Equipaje.",
+      "Seguro de Accidentes.",
+      "Seguro de Pérdida de Conexiones."
+    ],
+    "correcta": 2
+  },
+  {
+    "numero": 49,
+    "contenido": "¿Cuál es el retraso mínimo para activar el beneficio de pérdida de conexión?",
+    "respuestas": [
+      "Una demora o cancelación de al menos 2 horas.",
+      "Una demora o cancelación de al menos 3 horas.",
+      "Una demora o cancelación de al menos 6 horas."
+    ],
+    "correcta": 1
+  },
+  {
+    "numero": 50,
+    "contenido": "¿Qué beneficio cubre la pérdida definitiva del equipaje?",
+    "respuestas": [
+      "Seguro de Pérdida de Conexiones.",
+      "Seguro de Pérdida de Equipaje.",
+      "Seguro Demora de Equipaje."
+    ],
+    "correcta": 1
+  },
+  {
+    "numero": 51,
+    "contenido": "¿Cuál es la cobertura de pérdida de equipaje para Visa Infinite?",
+    "respuestas": [
+      "US$ 1,500",
+      "USD 3.000.",
+      "US$ 4,000."
+    ],
+    "correcta": 1
+  },
+  {
+    "numero": 52,
+    "contenido": "¿Cuál es la cobertura de emergencia médica internacional para Visa Infinite?",
+    "respuestas": [
+      "US$ 150.000.",
+      "US$ 200.000.",
+      "US$ 250.000."
+    ],
+    "correcta": 2
+  },
+  {
+    "numero": 53,
+    "contenido": "¿Cuál es la cobertura de emergencia médica internacional para Visa Platinum?",
+    "respuestas": [
+      "US$ 150.000",
+      "US$ 170.000",
+      "US$ 200.000"
+    ],
+    "correcta": 1
+  },
+  {
+    "numero": 54,
+    "contenido": "¿Qué beneficio ofrece cobertura por colisión, robo o vandalismo en vehículos?",
+    "respuestas": [
+      "Garantía Extendida",
+      "Protección de Compras",
+      "Seguro de Alquiler de Vehículos"
+    ],
+    "correcta": 2
+  },
+  {
+    "numero": 55,
+    "contenido": "¿Qué beneficio proporciona conectividad móvil internacional?",
+    "respuestas": [
+      "Roaming Internacional (GigSky).",
+      "Visa Airport Companion",
+      "Visa Concierge."
+    ],
+    "correcta": 0
+  },
+  {
+    "numero": 56,
+    "contenido": "¿Cuántos GB sin costo recibe un cliente Visa Infinite con Roaming Internacional?",
+    "respuestas": [
+      "1 GB",
+      "3 GB.",
+      "no recibe GB sin costo"
+    ],
+    "correcta": 1
+  },
+  {
+    "numero": 57,
+    "contenido": "¿Qué descuento recibe un cliente Visa Infinite en Roaming Internacional?",
+    "respuestas": [
+      "10% de descuento",
+      "20% de descuento.",
+      "25% de descuento."
+    ],
+    "correcta": 1
+  },
+  {
+    "numero": 58,
+    "contenido": "¿Qué beneficio te ofrece tu Visa Cashback?",
+    "respuestas": [
+      "Devoluciones en hoteles.",
+      "Devoluciones en restaurantes.",
+      "Devoluciones en autos.",
+      "Todas las anteriores."
+    ],
+    "correcta": 3
+  },
+  {
+    "numero": 59,
+    "contenido": "¿Qué beneficio protege al cliente si encuentra el mismo producto a un menor precio después de comprarlo?",
+    "respuestas": [
+      "Protección de Compra.",
+      "Protección de Precios.",
+      "Garantía Extendida"
+    ],
+    "correcta": 1
+  },
+  {
+    "numero": 60,
+    "contenido": "¿Dentro de cuántos días aplica la Protección de Precios para compras en tiendas físicas?",
+    "respuestas": [
+      "7 días después de la compra.",
+      "15 días después de la compra.",
+      "30 días después de la compra."
+    ],
+    "correcta": 2
+  },
+  {
+    "numero": 61,
+    "contenido": "¿Dentro de cuántos días debe realizarse el reclamo para una compra en e-commerce bajo Protección de Precios?",
+    "respuestas": [
+      "5 días posteriores a la compra",
+      "7 días posteriores a la compra.",
+      "15 días posteriores a la compra."
+    ],
+    "correcta": 1
+  },
+  {
+    "numero": 62,
+    "contenido": "¿Qué beneficio protege productos nuevos contra robo o daño accidental?",
+    "respuestas": [
+      "Protección de Compras.",
+      "No existe ese beneficio.",
+      "Garantía Extendida"
+    ],
+    "correcta": 0
+  },
+  {
+    "numero": 63,
+    "contenido": "¿Hasta cuántos días después de la compra aplica Protección de Compras?",
+    "respuestas": [
+      "30 días después de la compra.",
+      "60 días después de la compra.",
+      "180 días después de la compra."
+    ],
+    "correcta": 2
+  },
+  {
+    "numero": 64,
+    "contenido": "¿Cuánto tiempo adicional puede extender Visa la garantía de un producto elegible?",
+    "respuestas": [
+      "hasta 30 días.",
+      "hasta 60 días",
+      "Hasta 1 año adicional."
+    ],
+    "correcta": 2
+  },
+  {
+    "numero": 65,
+    "contenido": "¿Cuál es la cobertura anual de Garantía Extendida para Visa Infinite?",
+    "respuestas": [
+      "US$ 15,000 por año.",
+      "USD 25.000 por año.",
+      "US$ 30.000 por año."
+    ],
+    "correcta": 1
+  },
+  {
+    "numero": 66,
+    "contenido": "¿Cuál es el único segmento que cuenta con Fast Track?",
+    "respuestas": [
+      "Visa Signature",
+      "Visa Platinum",
+      "Visa Infinite"
+    ],
+    "correcta": 2
+  },
+  {
+    "numero": 67,
+    "contenido": "¿Cuál es el beneficio con mayor cobertura económica dentro del portafolio de viajes?",
+    "respuestas": [
+      "Servicios de Emergencia Médica Internacional con cobertura de hasta USD 150.000",
+      "Servicios de Emergencia Médica Internacional con cobertura de hasta USD 250.000.",
+      "Servicios de Emergencia Médica Internacional con cobertura de hasta USD 300.000"
+    ],
+    "correcta": 1
+  },
+  {
+    "numero": 68,
+    "contenido": "¿Qué beneficio está disponible exclusivamente para tarjetahabientes Visa Infinite en Global Blue?",
+    "respuestas": [
+      "Acceso a los Global Blue Lounges.",
+      "Protección de Compras Internacionales.",
+      "Roaming Internacional (GigSky)."
+    ],
+    "correcta": 0
   }
 ]
