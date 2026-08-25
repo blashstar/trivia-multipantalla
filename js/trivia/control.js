@@ -3,8 +3,6 @@ import firebase from '../util/firebase.js';
 import {letra, numero} from '../util/texto.js';
 import plantilla from './plantilla.js';
 
-// console.log(plantilla);
-
 export default {
 	titulo: "Juego",
 	evento: "demo",
@@ -42,6 +40,14 @@ export default {
 
 	async init(){
 		Object.assign(this, opcionesJuego);
+
+		if(this.colores){
+			const root = document.documentElement;
+			for(const [clave, valor] of Object.entries(this.colores)){
+				root.style.setProperty(`--color-${clave}`, valor);
+			}
+		}
+
 		this.firebase.configurar(opcionesJuego, plantilla);
 
 		const evento = await this.firebase.obtener("/");
@@ -50,45 +56,11 @@ export default {
 		}
 
 		this.firebase.actualizar("control", true);
-		// console.log(gsap);
-		// this.firebase.conectar("preguntas", this, "preguntas");
 		this.firebase.conectar("jugadores", this, "jugadores");
-
-		// this.firebase.vigilar("jugadores", jugadores => {
-		// 	if(_.every(jugadores, (item) => item.respuesta != null)){
-		// 		this.evaluarRespuestas();
-		// 		this.tiempoRestante = 0;
-		// 		this.tiempo = 0;
-		// 	}
-		// });
-
-		// this.$watch("jugadores", (jugadores) => {
-		// 	console.log("this.tiempoRestante", this.tiempoRestante, this.tiempoRestante > 0)
-		// 	if(_.every(jugadores, (item) => item.respuesta != null) && this.tiempoRestante > 0){
-
-		// 		this.evaluarRespuestas();
-		// 		this.tiempoRestante = 0;
-		// 		this.tiempo = 0;
-		// 	}
-		// })
-
-		// _.forEach(this.jugadores, (jugador, id) => {
-		// 	this.$watch(jugadores[id].respuesta, () => {
-		// 		console.log("$watch(jugadores[id].respuesta");
-		// 		if(_.every(jugadores, (item) => item.respuesta != null)){
-		// 			this.evaluarRespuestas();
-		// 			this.tiempoRestante = 0;
-		// 			this.tiempo = 0;s
-		// 		}
-		// 	})
-		// });
-
-
 	},
 
 	mostrarPantalla(nombre) {
 		this.firebase.actualizar("juego/pagina", nombre);
-		// console.log('nombre', nombre);
 
 		switch(nombre){
 			case "puntajes":
@@ -119,12 +91,8 @@ export default {
 
 	},
 
-	mostrarPantallaJugador(nombre) {
-		this.firebase.actualizar("jugador/pagina", nombre);
-	},
 
 	seleccionarPregunta() {
-		// this.seleccionada = Math.floor(Math.random() * this.preguntas.length);
 		if(_.isEmpty(this.disponibles)){
 			this.utilizadas = [];
 		}
@@ -142,20 +110,15 @@ export default {
 
 	mostrarPregunta() {
 		this.detenerConteo();
-		// if(_.isNull(this.seleccionada)){
-			this.seleccionarPregunta();
-		// }
+		this.seleccionarPregunta();
 		if(_.isNull(this.seleccionada) || this.seleccionada === -1){
 			return;
 		}
 		this.firebase.actualizar("juego/pregunta", this.pregunta);
 		this.firebase.actualizar("juego/respuesta", "");
 		this.mostrarPantalla('pregunta');
-		// this.firebase.actualizar("juego/pagina", "pregunta");
-		// this.firebase.actualizar("jugador/pagina", "pregunta");
 
 		_.forEach(this.jugadores, (jugador, id) => {
-			// this.reiniciarJugador(id);
 			this.firebase.actualizar(`jugadores/${id}/respuesta`, '');
 			this.firebase.actualizar(`jugadores/${id}/tiempo`, 0);
 		});
@@ -193,7 +156,7 @@ export default {
 		this.intervaloTiempo = setInterval(() => {
 			const transcurrido = (_.now() - this.tiempoInicio) / 1000;
 			this.tiempo = _.clamp(transcurrido, 0, this.segundos);
-			this.tiempoRestante = _.clamp(this.segundos - this.tiempo, 0, this.segundos);
+			this.tiempoRestante = parseFloat(_.clamp(this.segundos - this.tiempo, 0, this.segundos).toFixed(3));
 
 			this.firebase.actualizar("juego/tiempo", this.tiempo);
 			this.firebase.actualizar("juego/tiempoRestante", this.tiempoRestante);
@@ -219,8 +182,6 @@ export default {
 	},
 
 	evaluarRespuestas(){
-		// console.log("this.evaluarRespuestas()", this.respuestas);
-		// console.table(_.sortBy(this.jugadores, "tiempo"));
 		const primero = _.head(
 			_.sortBy(
 				_.filter(
@@ -232,9 +193,7 @@ export default {
 			)
 		);
 
-		// console.table(_.isNil(ganador), ganador, ganador?.puntaje);
 		if(!_.isNil(primero)){
-			// const id = primero.etiqueta.charCodeAt(0) - 65;
 			const id = numero(primero.etiqueta);
 			this.firebase.actualizar(`jugadores/${id}/puntaje`, primero.puntaje + 1);
 		}
@@ -254,13 +213,10 @@ export default {
 	},
 
 	reiniciarJugador(id){
-		// this.firebase.actualizar(`jugadores/${id}/puntaje`, 0);
 		this.firebase.actualizar(`jugadores/${id}/respuesta`, null);
 		this.firebase.actualizar(`jugadores/${id}/tiempo`, 0);
-		// this.firebase.actualizar(`jugadores/${id}/correcta`, false);
 		this.firebase.actualizar(`jugadores/${id}/estado`, "parado");
 		this.firebase.actualizar(`jugadores/${id}/puntaje`, 0);
-		// this.firebase.actualizar(`jugadores/${id}/gana`, false);
 	},
 
 
@@ -270,23 +226,24 @@ export default {
 		});
 	},
 
-	reiniciarJuego(){
+	async reiniciarJuego(){
 		this.detenerConteo();
-		this.firebase.actualizar('juego/comando', "inicio");
-		this.firebase.actualizar('juego/pregunta', null);
-		this.firebase.actualizar('juego/ganador', false);
-		this.firebase.actualizar('jugadores', {});
-		this.mostrarPantalla('inicio');
+
+		await Promise.all([
+			this.firebase.actualizar('juego/comando', "inicio"),
+			this.firebase.actualizar('juego/pregunta', null),
+			this.firebase.actualizar('juego/ganador', false),
+			this.firebase.actualizar('jugadores', {}),
+		]);
 
 		this.seleccionada = null;
 		this.tiempo = 0;
 		this.tiempoRestante = 0;
 		this.utilizadas = [];
 
-		this.firebase.actualizar('juego/comando', "");
+		await this.firebase.actualizar('juego/comando', "");
 
+		this.mostrarPantalla('inicio');
 		location.reload();
-
-		// this.$nextTick(() => this.firebase.actualizar('juego/comando', ""));
 	}
 }

@@ -43,13 +43,8 @@ export default {
 
 
 		if(this.evento == null && plantilla != null){
-			console.log("evento: " + plantilla);
 			await set(evento, plantilla);
 		}
-
-		// this.conectar("pagina", "juego/pagina");
-		// this.conectar("pregunta", "juego/pregunta");
-		// this.conectar("jugadores", "juego/jugadores");
 
 		this.activo = true;
 	},
@@ -80,7 +75,7 @@ export default {
 		return Object.values(await this.obtener(clave));
 	},
 
-	async agregar(clave, objeto, number = false){
+	async agregar(clave, objeto, conIdNumerico = false){
 		const lista = await get(child(evento, clave));
 		let id = 0;
 		if(lista !== null){
@@ -89,7 +84,7 @@ export default {
 
 		let item = null;
 
-		if(number){
+		if(conIdNumerico){
 			item = child(evento, `${clave}/${id}`);
 		}
 		else{

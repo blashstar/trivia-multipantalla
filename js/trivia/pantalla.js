@@ -21,7 +21,7 @@ export default {
 		},
 	},
 
-	urJugadores: "",
+	urlJugadores: "",
 	invitacion: "",
 
 	sexos:{
@@ -29,15 +29,12 @@ export default {
 		"M": "hombre",
 	},
 
-	maximoJugadores: 3,
 	jugadores: [],
 	avatares:{},
 	pregunta: {},
 	respuestaCorrecta: "",
 	tiempo: 0,
 	tiempoRestante: 0,
-	// qr: false,
-	// pagina: "#",
 
 	firebase,
 	url,
@@ -80,17 +77,15 @@ export default {
 
 	init(){
 		Object.assign(this, opcionesJuego);
+
+		if(this.colores){
+			const root = document.documentElement;
+			for(const [clave, valor] of Object.entries(this.colores)){
+				root.style.setProperty(`--color-${clave}`, valor);
+			}
+		}
+
 		this.invitacion = qr.generar(this.urlJugadoresCompleta).outerHTML;
-
-		// const evento = await this.firebase.obtener("/");
-		// if(_.isNull(evento)){
-		// 	this.firebase.actualizar("/", plantilla);
-		// }
-		// const imagenQR = qr.generar(this.urJugadores);
-		// this.$refs.qrJugadores.appendChild(imagenQR);
-		// console.log(imagenQR.outerHTML);
-
-		// console.log(JSON.stringify(this.$refs));
 
 		this.firebase.configurar(opcionesJuego, plantilla);
 
@@ -101,19 +96,15 @@ export default {
 		this.firebase.conectar("juego/tiempoRestante", this, "tiempoRestante");
 
 		this.firebase.vigilar('juego/pagina', pagina => {
-			// console.log(pagina.val());
 			this.url.navegar(pagina.val());
 
 			this.$nextTick(() => this.alMostrarPantalla());
 		})
 
 		this.firebase.vigilar('juego/comando', comando => {
-			// console.log('juego/comando', comando.val());
 			switch(comando.val()){
 				case "inicio":
-					// this.navegar("inicio");
 					_.forEach(this.jugadores, (jugador, id) => {
-						// console.log(id, jugador);
 						this.avatares[id].avance = `avance-0`;
 					});
 				break;
@@ -121,7 +112,6 @@ export default {
 					this.actualizarAvances();
 				break;
 			}
-			// this.firebase.actualizar("juego/comando", "");
 		});
 
 		for (let i = 0; i < this.maximoJugadores; i++) {
@@ -148,7 +138,6 @@ export default {
 
 		switch(this.pagina){
 			case "espera":
-				// console.table(this.$refs);
 			break;
 			case "carrera":
 				this.actualizarAvances();
@@ -171,8 +160,6 @@ export default {
 
 	mostrarConfetti(){
 		const pantalla = document.querySelector("#podio");
-		console.log(pantalla);
-		// confetti();
 		var count = 200;
 		var defaults = {
 			origin: { y: 0.75 }
