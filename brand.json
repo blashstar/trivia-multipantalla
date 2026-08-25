@@ -1,0 +1,45 @@
+{
+  "marca": {
+    "nombre": "Trivia Visa",
+    "eslogan": "Tienes más de lo que crees",
+    "evento": "visa-scotiabank"
+  },
+  "colores": {
+    "primario": "#1434CB",
+    "secundario": "#063b9e",
+    "acento": "#DD6126",
+    "fondo": "#000000",
+    "texto": "#ffffff"
+  },
+  "logos": {
+    "principal": "img/visa/logo_scotiabank.svg",
+    "trivia": "img/visa/logo_trivia.svg",
+    "decoracion": "img/visa/paco.svg",
+    "juego": "img/visa/juego.svg",
+    "estrella": "img/visa/estrella.svg",
+    "gotasEste": "img/visa/gotas-este.svg",
+    "gotasOeste": "img/visa/gotas-oeste.svg"
+  },
+  "textos": {
+    "bienvenida": "¡Bienvenido al reto!",
+    "instrucciones": [
+      "Mira atentamente la pregunta que proyectaremos en pantalla gigante.",
+      "Selecciona tu respuesta en tu celular.",
+      "Recuerda: solo tienes 5 segundos para responder.",
+      "Cada ronda incluye 6 preguntas.",
+      "Cada acierto suma puntos.",
+      "Y ya sabes... ¡nada de mirar las respuestas del otro, eh!"
+    ],
+    "qrTitulo": "Escanea el QR",
+    "qrSubtitulo": "para empezar a jugar",
+    "instruccionesTitulo": "Instrucciones",
+    "ranking": "Ranking"
+  },
+  "jugadores": {
+    "maximo": 3
+  },
+  "pantalla": {
+    "ancho": 1920,
+    "alto": 1080
+  }
+}

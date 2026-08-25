@@ -1,9 +1,7 @@
 #aplicacion{
-	/* background-color: #EEE; */
 }
 
 #aplicacion *{
-	/* outline: thin solid fuchsia; */
 }
 
 
@@ -73,13 +71,13 @@ button{
 	justify-content: center;
 	align-items: stretch;
 	gap: 0;
-	border: 1px solid #DD6126;
+	border: 1px solid var(--color-acento);
 	border-radius: .5em;
 	overflow: hidden;
 }
 
 #final h1{
-	background: #DD6126;
+	background: var(--color-acento);
 	color: #fff;
 	font-size: 1.5rem;
 	font-weight: bold;
@@ -89,7 +87,7 @@ button{
 }
 
 #final h3{
-	color: #DD6126;
+	color: var(--color-acento);
 	font-size: 2rem;
 	font-weight: bold;
 	text-align: center;
@@ -138,7 +136,7 @@ button{
 
 
 #sexo .opcion input:checked + .visual{
-	background-color: #DD6126;
+	background-color: var(--color-acento);
 }
 
 .ingreso{
@@ -201,17 +199,13 @@ button{
 #pregunta .opcion .letra{
 	flex: 0 0 60px;
 	background-color: #000;
-	/* background-image: radial-gradient(50% 50% at 50% 50%, #F7901D 0%, #DC5F13 100%);
-	box-shadow: rgb(0 0 0 / 80%) 0 0 5px; */
 	color: white;
 	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 2rem;
 	line-height: 60px;
-	/* padding: 1rem; */
 	aspect-ratio: 1;
 	border-radius: 30px;
-	/* border-radius: 100%; */
 }
 
 #pregunta .opcion .texto{
@@ -338,7 +332,6 @@ button{
 }
 
 #inicio .contenedor{
-	/* margin-top: 75%; */
 	margin-bottom: 20%;
 }
 
@@ -406,7 +399,7 @@ button{
 	justify-content: center;
 	gap: 1rem;
 	font-size: 100px;
-	color: #D60926;
+	color: var(--color-primario);
 }
 
 #espera .valor img{
@@ -471,12 +464,6 @@ button{
 }
 
 #final figure img{
-	/* width: 100%; */
-	margin: auto;
-}
-
-#final figure img{
-	/* width: auto; */
 	margin: auto;
 }
 
@@ -505,7 +492,7 @@ button{
 	justify-content: center;
 	gap: 1rem;
 	font-size: 100px;
-	color: #D60926;
+	color: var(--color-primario);
 }
 
 #espera .valor img{

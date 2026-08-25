@@ -1,26 +1,26 @@
 {
   "evento": "visa-scotiabank",
   "segundos": 15,
-  "logo": "img/visa/logo_trivia.svg",
+  "logo": "img/visa-agosto/logo_trivia.svg",
   "urlJugadores": "/jugar.html",
   "pantallas": {
     "inicio": {
-      "fondo": "img/visa/fondo.webp"
+      "fondo": "img/visa-agosto/fondo.svg"
     },
     "espera": {
-      "fondo": "false"
+      "fondo": "img/visa-agosto/fondo_visa.svg"
     },
     "carrera": {
-      "fondo": "false"
+      "fondo": "img/visa-agosto/juego_fondo.svg"
     },
     "pregunta": {
-      "fondo": "false"
+      "fondo": "img/visa-agosto/juego_fondo.svg"
     },
     "podio": {
-      "fondo": "false"
+      "fondo": "img/visa-agosto/juego_fondo.svg"
     },
     "puntajes": {
-      "fondo": "false"
+      "fondo": "img/visa-agosto/juego_fondo.svg"
     }
   },
   "imagenes": {

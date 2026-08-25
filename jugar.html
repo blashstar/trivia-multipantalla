@@ -34,7 +34,7 @@
 				<section class="pagina" id="inicio">
 					<div class="contenedor">
 						<button @click="navegar('nombre')">
-							<img src="/img/visa/logo_trivia.svg" alt="" width="640px">
+							<img :src="logos?.trivia" alt="" width="640px">
 						</button>
 					</div>
 				</section>
@@ -93,7 +93,7 @@
 			<template x-if="pagina=='nombre'">
 				<section class="pagina" id="nombre">
 					<div class="trivia_marca">
-						<img src="/img/visa/logo_scotiabank.svg" alt="">
+						<img :src="logos?.principal" :alt="marca?.nombre">
 					</div>
 					<div class="grupo">
 
@@ -121,12 +121,12 @@
 			<template x-if="pagina=='espera'">
 				<section class="pagina" id="espera">
 					<div class="trivia_marca">
-						<img src="/img/visa/logo_scotiabank.svg" alt="">
+						<img :src="logos?.principal" :alt="marca?.nombre">
 					</div>
 
 					<div class="grupo">
 						<figure>
-							<img src="/img/visa/juego.svg" alt="" width="160">
+							<img :src="logos?.juego" alt="" width="160">
 						</figure>
 						<div class="contenedor">
 
@@ -137,17 +137,17 @@
 
 							<div class="nombre" x-text="nombre"></div>
 							<figure>
-								<img src="/img/visa/estrella.svg" alt="" width="180">
+								<img :src="logos?.estrella" alt="" width="180">
 							</figure>
 							<div class="puntaje">
 								<strong>Tu puntaje actual:</strong>
 								<div class="valor">
 									<figure>
-										<img src="/img/visa/gotas-este.svg" alt="" width="45">
+										<img :src="logos?.gotasEste" alt="" width="45">
 									</figure>
 									<span x-text="puntaje" class="cifra"></span>
 									<figure>
-										<img src="/img/visa/gotas-oeste.svg" alt="" width="45">
+										<img :src="logos?.gotasOeste" alt="" width="45">
 									</figure>
 
 								</div>
@@ -160,7 +160,7 @@
 			<template x-if="pagina=='pregunta'">
 				<section class="pagina" id="pregunta">
 					<div class="trivia_marca">
-						<img src="/img/visa/logo_scotiabank.svg" alt="">
+						<img :src="logos?.principal" :alt="marca?.nombre">
 					</div>
 					<div class="contenedor">
 						<div
@@ -209,29 +209,29 @@
 				<section class="pagina" id="final">
 
 					<div class="trivia_marca">
-						<img src="/img/visa/logo_scotiabank.svg" alt="">
+						<img :src="logos?.principal" :alt="marca?.nombre">
 					</div>
 
 					<div class="grupo">
 						<figure>
-							<img src="/img/visa/juego.svg" alt="" width="160">
+							<img :src="logos?.juego" alt="" width="160">
 						</figure>
 						<div class="contenedor">
 
 
 							<h1 x-text="ganador ? 'Ganaste' : 'Juego Finalizado'"></h1>
 							<figure>
-								<img src="/img/visa/estrella.svg" alt="" width="180">
+								<img :src="logos?.estrella" alt="" width="180">
 							</figure>
 							<div class="puntaje">
 								<strong>Tu puntaje final:</strong>
 								<div class="valor">
 									<figure>
-										<img src="/img/visa/gotas-este.svg" alt="" width="45">
+										<img :src="logos?.gotasEste" alt="" width="45">
 									</figure>
 									<span x-text="puntaje" class="cifra"></span>
 									<figure>
-										<img src="/img/visa/gotas-oeste.svg" alt="" width="45">
+										<img :src="logos?.gotasOeste" alt="" width="45">
 									</figure>
 
 								</div>
@@ -244,10 +244,8 @@
 	</body>
 	<script>
 		window.opcionesJuego = {
-			evento: "Elifarma",
 			modulo: "mando",
 			imagenes: {
-				// fondo: "",
 				femenino: "img/personajes/mujer-podio.svg",
 				masculino: "img/personajes/hombre-podio.svg",
 			},
@@ -255,22 +253,10 @@
 	</script>
 	<script src="env.js"></script>
 	<script type="module">
-		async function iniciar() {
-			try {
-				const configResp = await fetch('./config.json');
-				const config = await configResp.json();
+		import { cargarConfig } from './js/loader.js';
 
-				window.opcionesJuego = {
-					...window.opcionesJuego,
-					...config
-				};
-			} catch (error) {
-				console.error('No se pudo cargar config.json:', error);
-			}
+		await cargarConfig();
 
-			await import('./js/mando.js');
-		}
-
-		iniciar();
+		await import('./js/mando.js');
 	</script>
 </html>
