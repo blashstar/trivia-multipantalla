@@ -173,13 +173,19 @@
 								class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-left"
 							>
 								<strong>Tiempo</strong>
-								<span x-text="tiempo"></span>
+								<br>
+								<span style="font-size: 1.5rem; font-weight: bold; min-width: 6ch;
+										font-variant-numeric: tabular-nums;
+										font-feature-settings: 'tnum' 1;" x-text="`${String(Math.floor(tiempo || 0)).padStart(2, '0')}.${((tiempo || 0) % 1).toFixed(3).slice(2)}`"></span>
 							</div>
 							<div
 								class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-left"
 							>
 								<strong>Tiempo Restante</strong>
-								<span x-text="tiempoRestante"></span>
+								<br>
+								<span style="font-size: 1.5rem; font-weight: bold; min-width: 6ch;
+										font-variant-numeric: tabular-nums;
+										font-feature-settings: 'tnum' 1;" x-text="`${String(Math.floor(tiempoRestante || 0)).padStart(2, '0')}.${((tiempoRestante || 0) % 1).toFixed(3).slice(2)}`"></span>
 							</div>
 							<div
 								class="uk-card uk-card-default uk-card-small uk-card-body uk-margin-left"
