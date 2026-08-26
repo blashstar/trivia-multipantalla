@@ -724,7 +724,6 @@
 	align-content: start;
 	gap: 0 2rem;
 	padding: 3rem;
-	border-radius: 3rem;
 	height: 100%;
 
 }
@@ -741,7 +740,7 @@
 }
 
 #podio .tabla-header {
-	color: #000;
+	color: var(--color-primario);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
@@ -750,8 +749,8 @@
 }
 
 #podio .tabla-fila {
-	border-bottom: 5px solid #000000;
-	color: #000;
+	border-bottom: 5px solid var(--color-primario);
+	color: var(--color-primario);
 	padding: 2rem 0;
 	line-height: 1.25;
 }
@@ -799,7 +798,7 @@
 }
 
 #podio .grupo{
-	align-self: stretch;
+	/* align-self: stretch; */
 	width: 100%;
 	display: grid;
 	grid-template-columns: 2fr 3fr;
@@ -830,7 +829,7 @@
 }
 
 /* =========================================================
-   Puntajes - copia exacta de Podio
+    Puntajes - copia exacta de Podio
    ========================================================= */
 
 #puntajes .plataforma{
@@ -961,7 +960,6 @@
 	align-content: start;
 	gap: 0 2rem;
 	padding: 3rem;
-	border-radius: 3rem;
 	height: 100%;
 
 }
@@ -978,7 +976,7 @@
 }
 
 #puntajes .tabla-header {
-	color: #000;
+	color: var(--color-primario);
 	font-weight: bold;
 	text-transform: uppercase;
 	letter-spacing: 0.05em;
@@ -987,8 +985,8 @@
 }
 
 #puntajes .tabla-fila {
-	border-bottom: 5px solid #000000;
-	color: #000;
+	border-bottom: 5px solid var(--color-primario);
+	color: var(--color-primario);
 	padding: 2rem 0;
 	line-height: 1.25;
 }
@@ -1036,7 +1034,7 @@
 }
 
 #puntajes .grupo{
-	align-self: stretch;
+	/* align-self: stretch; */
 	width: 100%;
 	display: grid;
 	grid-template-columns: 2fr 3fr;
