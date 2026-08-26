@@ -64,7 +64,7 @@ export default {
 			}
 		}
 
-		this.firebase.configurar(opcionesJuego);
+		await this.firebase.configurar(opcionesJuego);
 		this.url.interpretar(location);
 
 		this.firebase.conectar("juego/pregunta", this, "pregunta");
@@ -112,7 +112,6 @@ export default {
 	},
 
 	async registrar(){
-
 		if(this.registrable){
 			this.jugador = this.jugadores;
 			const item = await this.firebase.agregar("jugadores", {

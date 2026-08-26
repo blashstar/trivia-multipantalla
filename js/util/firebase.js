@@ -34,19 +34,23 @@ export default {
 			return;
 		}
 
-		app = initializeApp(this.config);
-		analytics = getAnalytics(app);
-		db = ref(getDatabase(app), this.config.evento);
+		try {
+			app = initializeApp(this.config);
+			analytics = getAnalytics(app);
+			db = ref(getDatabase(app), this.config.evento);
 
-		evento = ref(getDatabase(app), this.config.evento);
-		this.evento = (await get(evento)).val();
+			evento = ref(getDatabase(app), this.config.evento);
+			this.evento = (await get(evento)).val();
 
 
-		if(this.evento == null && plantilla != null){
-			await set(evento, plantilla);
+			if(this.evento == null && plantilla != null){
+				await set(evento, plantilla);
+			}
+
+			this.activo = true;
+		} catch(error) {
+			console.error('Error inicializando Firebase:', error);
 		}
-
-		this.activo = true;
 	},
 
 	vigilar(clave, callback){
