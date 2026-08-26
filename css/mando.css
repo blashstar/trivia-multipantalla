@@ -177,7 +177,6 @@ button{
 	align-items: stretch;
 	gap: 1.5rem;
 	padding: 2vh 0 0;
-	border-radius: 1rem;
 	overflow: hidden;
 	text-align: center;
 	width: 85vw;
@@ -233,6 +232,7 @@ button{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	font-weight: bold;
 }
 
 #pregunta .opcion .texto{

@@ -152,12 +152,21 @@ export default {
 		this.firebase.conectar(`jugadores/${this.jugador}/puntaje`, this, "puntaje");
 		this.firebase.conectar(`jugadores/${this.jugador}/respuesta`, this, "respuesta");
 
+		// Vigilar puntaje para preservar el ultimo valor conocido ante reinicio
+		this.firebase.vigilar(`jugadores/${this.jugador}/puntaje`, snapshot => {
+			if(snapshot.val() != null){
+				this._ultimoPuntaje = snapshot.val();
+			}
+		});
+
 		this.firebase.vigilar(`jugadores/${this.jugador}`, snapshot => {
 			if(!snapshot.exists()){
 				console.log("desconectado");
 				this.jugador = null;
 				this.sexo = '';
 				this.nombre = '';
+				// Preservar puntaje en pantalla final tras reinicio
+				this.puntaje = this._ultimoPuntaje ?? 0;
 			}
 		});
 
