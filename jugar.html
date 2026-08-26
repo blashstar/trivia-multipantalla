@@ -34,7 +34,7 @@
 				<section class="pagina" id="inicio">
 					<div class="contenedor">
 						<button @click="navegar('nombre')">
-							<img :src="logos?.trivia" alt="" width="640px">
+							<img src="img/mando/arte_inicio.svg" alt="" width="640px">
 						</button>
 					</div>
 				</section>
@@ -92,9 +92,6 @@
 			</template>
 			<template x-if="pagina=='nombre'">
 				<section class="pagina" id="nombre">
-					<div class="trivia_marca">
-						<img :src="logos?.principal" :alt="marca?.nombre">
-					</div>
 					<div class="grupo">
 
 						<h1>¿Cuál es tu nombre?</h1>
@@ -120,13 +117,10 @@
 			</template>
 			<template x-if="pagina=='espera'">
 				<section class="pagina" id="espera">
-					<div class="trivia_marca">
-						<img :src="logos?.principal" :alt="marca?.nombre">
-					</div>
 
 					<div class="grupo">
 						<figure>
-							<img :src="logos?.juego" alt="" width="160">
+							<img src="img/mando/ico_operaciones.svg" alt="" width="160">
 						</figure>
 						<div class="contenedor">
 
@@ -136,18 +130,15 @@
 							></div>
 
 							<div class="nombre" x-text="nombre"></div>
-							<figure>
-								<img :src="logos?.estrella" alt="" width="180">
-							</figure>
 							<div class="puntaje">
 								<strong>Tu puntaje actual:</strong>
 								<div class="valor">
 									<figure>
-										<img :src="logos?.gotasEste" alt="" width="45">
+										<img src="img/mando/estrellas_i.svg" alt="" width="80">
 									</figure>
 									<span x-text="puntaje" class="cifra"></span>
 									<figure>
-										<img :src="logos?.gotasOeste" alt="" width="45">
+										<img src="img/mando/estrellas_d.svg" alt="" width="80">
 									</figure>
 
 								</div>
@@ -159,9 +150,6 @@
 			</template>
 			<template x-if="pagina=='pregunta'">
 				<section class="pagina" id="pregunta">
-					<div class="trivia_marca">
-						<img :src="logos?.principal" :alt="marca?.nombre">
-					</div>
 					<div class="contenedor">
 						<div
 							class="contenido"
@@ -186,11 +174,11 @@
 									<span class="texto" x-html="opcion"></span>
 								</button>
 							</template>
-							<template x-if="correcta">
-								<div class="respuesta">
-									<span x-text="correcta"></span>
-								</div>
-							</template>
+							<!-- <template x-if="correcta"> -->
+								<!-- <div class="respuesta"> -->
+									<!-- <span x-text="correcta"></span> -->
+								<!-- </div> -->
+							<!-- </template> -->
 						</div>
 						<div class="contestado" x-show="respuesta">
 							<span>Has contestado </span>
@@ -208,30 +196,24 @@
 			<template x-if="pagina=='final'">
 				<section class="pagina" id="final">
 
-					<div class="trivia_marca">
-						<img :src="logos?.principal" :alt="marca?.nombre">
-					</div>
 
 					<div class="grupo">
 						<figure>
-							<img :src="logos?.juego" alt="" width="160">
+							<img src="img/mando/ico_copa.svg" alt="" width="160">
 						</figure>
 						<div class="contenedor">
 
 
 							<h1 x-text="ganador ? 'Ganaste' : 'Juego Finalizado'"></h1>
-							<figure>
-								<img :src="logos?.estrella" alt="" width="180">
-							</figure>
 							<div class="puntaje">
 								<strong>Tu puntaje final:</strong>
 								<div class="valor">
 									<figure>
-										<img :src="logos?.gotasEste" alt="" width="45">
+										<img src="img/mando/estrellas_i.svg" alt="" width="80">
 									</figure>
 									<span x-text="puntaje" class="cifra"></span>
 									<figure>
-										<img :src="logos?.gotasOeste" alt="" width="45">
+										<img src="img/mando/estrellas_d.svg" alt="" width="80">
 									</figure>
 
 								</div>
