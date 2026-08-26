@@ -1,6 +1,6 @@
 {
   "evento": "visa-trivia",
-  "segundos": 5,
+  "segundos": 10,
   "logo": "img/visa-agosto/logo_trivia.svg",
   "urlJugadores": "/jugar.html",
   "pantallas": {
