@@ -155,7 +155,7 @@
     "contenido": "¿Tenemos algún beneficio que proteja al cliente ante la cancelación de vuelo?",
     "respuestas": [
       "No hay ningún beneficio de Cancelación de Viaje.",
-      "Verdadero. Existe el beneficio de Cancelaciónn de Viaje.",
+      "Verdadero. Existe el beneficio de Cancelación de Viaje.",
       "La protección solo cubre retrasos, no cancelaciones."
     ],
     "correcta": 1
