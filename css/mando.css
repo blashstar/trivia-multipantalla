@@ -203,7 +203,7 @@ button{
 }
 
 #pregunta .opcion{
-	font-size: 16px;
+	font-size: 20px;
 	background: none;
 	color: white;
 	font-weight: bold;
@@ -272,7 +272,7 @@ button{
 
 
 #pregunta .opcion.correcta{
-	font-size: 16px;
+	font-size: 20px;
 	background: #FFCB00;
 	color: #1434CB;
 	font-weight: bold;
