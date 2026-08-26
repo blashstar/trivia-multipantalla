@@ -1,13 +1,4 @@
 @font-face {
-    font-family: 'Scotia';
-    src: url('/fnt/Scotia-Bold.woff2') format('woff2'),
-        url('/fnt/Scotia-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
     font-family: 'Visa Dialect';
     src: url('/fnt/VisaDialect-Bold.woff2') format('woff2'),
         url('/fnt/VisaDialect-Bold.woff') format('woff');
@@ -47,7 +38,7 @@
 
 
 :root{
-	font-family: 'Scotia', sans-serif;
+	font-family: 'Visa Dialect', sans-serif;
 	--color-primario: #1434CB;
 	--color-secundario: #ffffff;
 	--color-acento: #DD6126;
@@ -55,7 +46,7 @@
 	--color-texto: #ffffff;
 	-webkit-font-smoothing: antialiased; /* macOS / Safari / Chrome */
 	-moz-osx-font-smoothing: grayscale; /* Firefox en macOS */
-	text-rendering: optimizeLegibility;  /* Fuerza kerning y suavizado preciso
+	text-rendering: optimizeLegibility;  /* Fuerza kerning y suavizado preciso */
 }
 
 body{
