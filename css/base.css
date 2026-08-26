@@ -53,6 +53,9 @@
 	--color-acento: #DD6126;
 	--color-fondo: #000000;
 	--color-texto: #ffffff;
+	-webkit-font-smoothing: antialiased; /* macOS / Safari / Chrome */
+	-moz-osx-font-smoothing: grayscale; /* Firefox en macOS */
+	text-rendering: optimizeLegibility;  /* Fuerza kerning y suavizado preciso
 }
 
 body{
