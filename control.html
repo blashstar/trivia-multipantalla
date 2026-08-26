@@ -283,6 +283,6 @@
 			console.error('No se pudieron cargar las preguntas:', error);
 		}
 
-		await import('./js/control.js');
+		await import('./js/control.js?v=' + Date.now());
 	</script>
 </html>

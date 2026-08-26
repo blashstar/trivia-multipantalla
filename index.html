@@ -205,6 +205,6 @@
 		await cargarConfig();
 		iniciarEscalado();
 
-		await import('./js/index.js');
+		await import('./js/index.js?v=' + Date.now());
 	</script>
 </html>
