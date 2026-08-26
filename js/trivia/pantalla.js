@@ -23,6 +23,20 @@ export default {
 
 	urlJugadores: "",
 	invitacion: "",
+	textos: {
+		bienvenida: "¡Bienvenido al reto!",
+		instrucciones: [
+			"Mira atentamente la pregunta que proyectaremos en pantalla gigante.",
+			"Recuerda: solo tienes {segundos} segundos para responder.",
+			"Selecciona tu respuesta en tu celular.",
+			"Cada ronda incluye 6 preguntas.",
+			"Cada acierto suma puntos.",
+		],
+		qrTitulo: "Escanea el QR",
+		qrSubtitulo: "para empezar a jugar",
+		instruccionesTitulo: "Instrucciones",
+		ranking: "Ranking",
+	},
 
 	sexos:{
 		"F": "mujer",
