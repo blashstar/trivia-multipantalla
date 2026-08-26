@@ -162,7 +162,7 @@
 							>
 								<button
 									class="opcion"
-									:class="opcion === respuestaCorrecta ? 'correcta' : ''"
+									:class="id === correcta ? 'correcta' : ''"
 									type="button"
 									@click="responder(id)"
 									:disabled="deshabilitada(id)"
