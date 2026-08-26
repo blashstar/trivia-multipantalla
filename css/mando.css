@@ -1,4 +1,8 @@
 #aplicacion{
+	width: 100vw !important;
+	height: 100dvh !important;
+	position: fixed !important;
+	transform: none !important;
 }
 
 #aplicacion *{
@@ -197,15 +201,19 @@ button{
 }
 
 #pregunta .opcion .letra{
-	flex: 0 0 60px;
+	flex: 0 0 auto;
 	background-color: #000;
 	color: white;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: 2rem;
-	line-height: 60px;
+	font-size: clamp(1.2rem, 5vw, 2rem);
+	line-height: 1.2;
+	width: clamp(40px, 12vw, 60px);
 	aspect-ratio: 1;
-	border-radius: 30px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #pregunta .opcion .texto{
@@ -238,8 +246,9 @@ button{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 1.7rem;
+	font-size: clamp(1.2rem, 4vw, 1.7rem);
 	padding: .25em;
+	min-width: 2.5em;
 }
 
 #pregunta .respuesta{
@@ -322,7 +331,7 @@ button{
 
 
 #inicio{
-	background-image: radial-gradient(circle at center 75%, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 75%), url(/img/visa/fondo.webp);
+	background-image: radial-gradient(circle at center 75%, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 75%), url(/img/visa-agosto/fondo.svg);
 	background-position: center 75%, top left;
 	background-size: cover;
 	box-sizing: border-box;
@@ -347,7 +356,8 @@ button{
 
 
 #nombre .grupo{
-	width: 360px;
+	width: 90%;
+	max-width: 360px;
 	display: flex;
 	flex-direction: column;
 	align-items: stretch;
@@ -397,8 +407,8 @@ button{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 1rem;
-	font-size: 100px;
+	gap: 0.5rem;
+	font-size: clamp(48px, 15vw, 100px);
 	color: var(--color-primario);
 }
 
@@ -490,8 +500,8 @@ button{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 1rem;
-	font-size: 100px;
+	gap: 0.5rem;
+	font-size: clamp(48px, 15vw, 100px);
 	color: var(--color-primario);
 }
 
