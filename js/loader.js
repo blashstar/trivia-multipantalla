@@ -8,8 +8,8 @@
 export async function cargarConfig(extra = {}) {
     try {
         const [configResp, brandResp] = await Promise.all([
-            fetch('./config.json').then(r => r.json()),
-            fetch('./brand.json').then(r => r.json()).catch(() => ({}))
+            fetch('./config.json', { cache: 'no-store' }).then(r => r.json()),
+            fetch('./brand.json', { cache: 'no-store' }).then(r => r.json()).catch(() => ({}))
         ]);
 
         window.opcionesJuego = {
