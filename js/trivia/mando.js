@@ -36,6 +36,7 @@ export default {
 	tiempoRespuesta: 0,
 	correcta: '',
 	ganador: false,
+	segundos: 10,
 
 	get restante() {
 		return Math.ceil(this.tiempoRestante);
@@ -71,6 +72,7 @@ export default {
 		this.firebase.conectar("juego/respuesta", this, "correcta");
 		this.firebase.conectar("juego/tiempo", this, "tiempo");
 		this.firebase.conectar("juego/tiempoRestante", this, "tiempoRestante");
+		this.firebase.conectar("juego/segundos", this, "segundos");
 
 		if(this.jugador){
 			this.conectar();

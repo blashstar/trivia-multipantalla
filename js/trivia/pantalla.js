@@ -49,6 +49,7 @@ export default {
 	respuestaCorrecta: "",
 	tiempo: 0,
 	tiempoRestante: 0,
+	segundos: 10,
 
 	firebase,
 	url,
@@ -108,6 +109,7 @@ export default {
 		this.firebase.conectar("juego/respuesta", this, "respuestaCorrecta");
 		this.firebase.conectar("juego/tiempo", this, "tiempo");
 		this.firebase.conectar("juego/tiempoRestante", this, "tiempoRestante");
+		this.firebase.conectar("juego/segundos", this, "segundos");
 
 		this.firebase.vigilar('juego/pagina', pagina => {
 			this.url.navegar(pagina.val());

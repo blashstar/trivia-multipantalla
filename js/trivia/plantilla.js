@@ -9,6 +9,7 @@ export default {
 		tiempoRestante: "0.000",
 		comando: "",
 		ganador: "",
+		segundos: 10,
 	},
 	jugadores: [],
 };

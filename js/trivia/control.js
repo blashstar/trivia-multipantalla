@@ -48,7 +48,12 @@ export default {
 			}
 		}
 
-		this.firebase.configurar(opcionesJuego, plantilla);
+		await this.firebase.configurar(opcionesJuego, plantilla);
+
+		const segundosFirebase = await this.firebase.obtener("juego/segundos");
+		if(segundosFirebase != null){
+			this.segundos = segundosFirebase;
+		}
 
 		const evento = await this.firebase.obtener("/");
 		if(_.isNull(evento)){
@@ -241,5 +246,13 @@ export default {
 
 		this.mostrarPantalla('inicio');
 		location.reload();
+	},
+
+	ajustarSegundos(delta){
+		const nuevo = _.clamp(this.segundos + delta, 5, 45);
+		if(nuevo !== this.segundos){
+			this.segundos = nuevo;
+			this.firebase.actualizar("juego/segundos", this.segundos);
+		}
 	}
 }
