@@ -30,7 +30,9 @@ export default {
 			"Recuerda: solo tienes {segundos} segundos para responder.",
 			"Selecciona tu respuesta en tu celular.",
 			"Cada ronda incluye 6 preguntas.",
+			"Debes acertar al menos 3 preguntas para ganar.",
 			"Cada acierto suma puntos.",
+			"Y ya sabes... ¡nada de mirar las respuestas del otro, eh!"
 		],
 		qrTitulo: "Escanea el QR",
 		qrSubtitulo: "para empezar a jugar",
@@ -101,7 +103,9 @@ export default {
 				"Recuerda: solo tienes {segundos} segundos para responder.",
 				"Selecciona tu respuesta en tu celular.",
 				"Cada ronda incluye 6 preguntas.",
+				"Debes acertar al menos 3 preguntas para ganar.",
 				"Cada acierto suma puntos.",
+				"Y ya sabes... ¡nada de mirar las respuestas del otro, eh!"
 			],
 			qrTitulo: "Escanea el QR",
 			qrSubtitulo: "para empezar a jugar",
