@@ -74,6 +74,11 @@ export default {
 		this.firebase.conectar("juego/tiempoRestante", this, "tiempoRestante");
 		this.firebase.conectar("juego/segundos", this, "segundos");
 
+		const segundosFirebase = await this.firebase.obtener("juego/segundos");
+		if(segundosFirebase != null){
+			this.segundos = segundosFirebase;
+		}
+
 		if(this.jugador){
 			this.conectar();
 		}

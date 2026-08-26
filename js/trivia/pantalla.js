@@ -90,7 +90,7 @@ export default {
 		);
 	},
 
-	init(){
+	async init(){
 		Object.assign(this, opcionesJuego);
 
 		if(this.colores){
@@ -102,7 +102,12 @@ export default {
 
 		this.invitacion = qr.generar(this.urlJugadoresCompleta).outerHTML;
 
-		this.firebase.configurar(opcionesJuego, plantilla);
+		await this.firebase.configurar(opcionesJuego, plantilla);
+
+		const segundosFirebase = await this.firebase.obtener("juego/segundos");
+		if(segundosFirebase != null){
+			this.segundos = segundosFirebase;
+		}
 
 		this.firebase.conectar("jugadores", this, "jugadores");
 		this.firebase.conectar("juego/pregunta", this, "pregunta");
