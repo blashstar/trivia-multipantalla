@@ -157,17 +157,23 @@ button{
 
 	background-image: url(/img/mando/fondo_2.svg), url(/img/mando/fondo.svg);
 	background-repeat: no-repeat;
-	background-position: center, 100% 10%;
+	background-position: center, 100% 5%;
 	background-size: contain, 30% auto;
 }
 
 #pregunta{
-	padding: 3rem 2rem;
+	padding: 10% 0 5%;
 
 	background-image: url(/img/mando/fondo.svg);
 	background-repeat: no-repeat;
-	background-position: 100% 10%;
+	background-position: 100% 5%;
 	background-size: 30% auto;
+	overflow: auto;
+
+	* {
+		box-sizing: border-box;
+		/* outline: 1px solid fuchsia; */
+	}
 }
 
 #pregunta .contenedor{
@@ -176,19 +182,20 @@ button{
 	justify-content: stretch;
 	align-items: stretch;
 	gap: 1.5rem;
-	padding: 2vh 0 0;
-	overflow: hidden;
+	padding: 0;
 	text-align: center;
-	width: 85vw;
+	max-width: 400px;
+	max-height: 85vh;
+
 }
 
 #pregunta .contenido{
-	font-size: 24px;
+	font-size: 22px;
 	line-height: 1.3;
 	color: white;
 	background: none;
 	font-weight: 600;
-	padding: 1rem 2rem;
+	padding: 0 15dvw;
 	text-align: center;
 }
 
@@ -199,6 +206,11 @@ button{
 	gap: 0;
 	padding: 0;
 	position: relative;
+
+	* {
+		box-sizing: border-box;
+		/* outline: 1px solid fuchsia; */
+	}
 }
 
 #pregunta .opcion{
@@ -206,11 +218,11 @@ button{
 	background: none;
 	color: white;
 	font-weight: bold;
-	padding: 1rem;
+	padding: .5em;
 	display: flex;
 	align-items: center;
 	overflow: hidden;
-	gap: .5rem;
+	gap: .5em;
 	position: relative;
 }
 
@@ -224,7 +236,7 @@ button{
 	color: white;
 	text-transform: uppercase;
 	font-weight: bold;
-	font-size: clamp(1.2rem, 5vw, 2rem);
+	font-size: clamp(1.2rem, 5vw, 4rem);
 	line-height: 1.2;
 	width: clamp(40px, 12vw, 60px);
 	aspect-ratio: 1;
@@ -232,16 +244,14 @@ button{
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-weight: bold;
 }
 
 #pregunta .opcion .texto{
 	background-color: transparent;
 	color: white;
-	padding: 0.5em 1em;
 	text-align: left;
-	border-radius: 2em;
 	flex: 1 1 auto;
+	font-weight: normal;
 }
 
 
@@ -272,16 +282,12 @@ button{
 
 
 #pregunta .opcion.correcta{
-	font-size: 20px;
 	background: #FFCB00;
 	color: #1434CB;
-	font-weight: bold;
-	padding: 0;
-	display: flex;
-	align-items: center;
-	overflow: hidden;
-	gap: .5rem;
-	position: relative;
+}
+
+#pregunta .opcion.correcta[disabled]{
+	opacity: 0.85;
 }
 
 #pregunta .opcion.correcta .letra{
@@ -373,10 +379,6 @@ button{
 
 
 #inicio{
-	background-image: radial-gradient(circle at center 75%, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0) 75%), url(/img/visa-agosto/fondo.svg);
-	background-position: center 75%, top left;
-	background-size: cover;
-	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
 	justify-content: end;
