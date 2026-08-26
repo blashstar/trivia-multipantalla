@@ -67,8 +67,6 @@ export default {
 				_.forEach(this.jugadores, (jugador, id) => {
 					this.firebase.actualizar(`jugadores/${id}/pagina`, 'espera');
 				});
-				const audioPuntajes = new Audio("snd/celebra.mp3");
-				audioPuntajes.play();
 			break;
 			case "pregunta":
 				_.forEach(this.jugadores, (jugador, id) => {
@@ -79,8 +77,6 @@ export default {
 				_.forEach(this.jugadores, (jugador, id) => {
 					this.firebase.actualizar(`jugadores/${id}/pagina`, 'final');
 				});
-				const audio = new Audio("snd/celebra.mp3");
-				audio.play();
 			break;
 			default:
 				_.forEach(this.jugadores, (jugador, id) => {
