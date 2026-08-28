@@ -32,7 +32,7 @@ export default {
 	},
 
 	get respuestas() {
-		let lista = _.filter(this.jugadores, (item) => item?.respuesta != '')
+		let lista = _.filter(this.jugadores, (item) => item?.respuesta !== '' && item?.respuesta != null)
 		lista = _.orderBy(lista, "tiempo", "asc");
 
 		return lista;
