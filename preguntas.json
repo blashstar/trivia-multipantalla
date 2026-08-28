@@ -14,9 +14,9 @@
     "numero": 30,
     "contenido": "¿Qué beneficio ayuda al cliente a planear y gestionar reservas antes de viajar?",
     "respuestas": [
-      "Visa Concierge",
-      "Visa Destinations",
-      "Visa Luxury Hotel Collection"
+      "Visa Concierge.",
+      "Visa Destinations.",
+      "Visa Luxury Hotel Collection."
     ],
     "correcta": 0
   },
@@ -24,8 +24,8 @@
     "numero": 31,
     "contenido": "¿Qué beneficio ofrece acceso a más de 900 hoteles y resorts alrededor del mundo?",
     "respuestas": [
-      "Visa Concierge",
-      "Visa Destinations",
+      "Visa Concierge.",
+      "Visa Destinations.",
       "Visa Luxury Hotel Collection."
     ],
     "correcta": 2
@@ -34,9 +34,9 @@
     "numero": 32,
     "contenido": "¿Qué beneficio permite al cliente acceder a experiencias y descuentos exclusivos en destino?",
     "respuestas": [
-      "Visa Concierge",
+      "Visa Concierge.",
       "Visa Destinations.",
-      "Visa Luxury Hotel Collection"
+      "Visa Luxury Hotel Collection."
     ],
     "correcta": 1
   },
@@ -44,9 +44,9 @@
     "numero": 33,
     "contenido": "¿Qué beneficio permite recuperar impuestos de compras realizadas en Europa?",
     "respuestas": [
-      "Tax Refund Plus",
+      "Tax Refund Plus.",
       "Global Blue.",
-      "Europe Shopping Rewards"
+      "Europe Shopping Rewards."
     ],
     "correcta": 1
   },
@@ -74,9 +74,9 @@
     "numero": 36,
     "contenido": "¿Cuál es la aplicación desde donde se gestionan los beneficios aeroportuarios de Visa?",
     "respuestas": [
-      "Visa Concierge",
-      "Visa Destinations",
-      "Visa Airport Companion"
+      "Visa Concierge.",
+      "Visa Destinations.",
+      "Visa Airport Companion."
     ],
     "correcta": 2
   },
@@ -84,9 +84,9 @@
     "numero": 37,
     "contenido": "¿Cuántos salones de aeropuerto están disponibles en Visa Airport Companion?",
     "respuestas": [
-      "990 salones",
+      "990 salones.",
       "1221 salones.",
-      "1300 salones"
+      "1300 salones."
     ],
     "correcta": 1
   },
@@ -104,9 +104,9 @@
     "numero": 39,
     "contenido": "¿En cuántos países tiene presencia Visa Airport Companion?",
     "respuestas": [
-      "120 países",
+      "120 países.",
       "141 países.",
-      "171 países"
+      "171 países."
     ],
     "correcta": 1
   },
@@ -124,8 +124,8 @@
     "numero": 41,
     "contenido": "¿Para qué categoría de tarjeta aplica Fast Track?",
     "respuestas": [
-      "Visa Signature",
-      "Visa Platinum",
+      "Visa Signature.",
+      "Visa Platinum.",
       "Visa Infinite."
     ],
     "correcta": 2
@@ -134,7 +134,7 @@
     "numero": 42,
     "contenido": "¿Qué debe hacer un cliente para activar los beneficios de Visa Airport Companion?",
     "respuestas": [
-      "Llamar a la central de Visa",
+      "Llamar a la central de Visa.",
       "No se necesita activar.",
       "Descargar la app, crear una cuenta y registrar su tarjeta elegible."
     ],
@@ -225,7 +225,7 @@
     "numero": 51,
     "contenido": "¿Cuál es la cobertura de pérdida de equipaje para Visa Infinite?",
     "respuestas": [
-      "US$ 1,500",
+      "US$ 1,500.",
       "USD 3.000.",
       "US$ 4,000."
     ],
@@ -245,9 +245,9 @@
     "numero": 53,
     "contenido": "¿Cuál es la cobertura de emergencia médica internacional para Visa Platinum?",
     "respuestas": [
-      "US$ 150.000",
-      "US$ 170.000",
-      "US$ 200.000"
+      "US$ 150.000.",
+      "US$ 170.000.",
+      "US$ 200.000."
     ],
     "correcta": 1
   },
@@ -255,9 +255,9 @@
     "numero": 54,
     "contenido": "¿Qué beneficio ofrece cobertura por colisión, robo o vandalismo en vehículos?",
     "respuestas": [
-      "Garantía Extendida",
-      "Protección de Compras",
-      "Seguro de Alquiler de Vehículos"
+      "Garantía Extendida.",
+      "Protección de Compras.",
+      "Seguro de Alquiler de Vehículos."
     ],
     "correcta": 2
   },
@@ -266,7 +266,7 @@
     "contenido": "¿Qué beneficio proporciona conectividad móvil internacional?",
     "respuestas": [
       "Roaming Internacional (GigSky).",
-      "Visa Airport Companion",
+      "Visa Airport Companion.",
       "Visa Concierge."
     ],
     "correcta": 0
@@ -275,9 +275,9 @@
     "numero": 56,
     "contenido": "¿Cuántos GB sin costo recibe un cliente Visa Infinite con Roaming Internacional?",
     "respuestas": [
-      "1 GB",
+      "1 GB.",
       "3 GB.",
-      "no recibe GB sin costo"
+      "no recibe GB sin costo."
     ],
     "correcta": 1
   },
@@ -285,7 +285,7 @@
     "numero": 57,
     "contenido": "¿Qué descuento recibe un cliente Visa Infinite en Roaming Internacional?",
     "respuestas": [
-      "10% de descuento",
+      "10% de descuento.",
       "20% de descuento.",
       "25% de descuento."
     ],
@@ -308,7 +308,7 @@
     "respuestas": [
       "Protección de Compra.",
       "Protección de Precios.",
-      "Garantía Extendida"
+      "Garantía Extendida."
     ],
     "correcta": 1
   },
@@ -326,7 +326,7 @@
     "numero": 61,
     "contenido": "¿Dentro de cuántos días debe realizarse el reclamo para una compra en e-commerce bajo Protección de Precios?",
     "respuestas": [
-      "5 días posteriores a la compra",
+      "5 días posteriores a la compra.",
       "7 días posteriores a la compra.",
       "15 días posteriores a la compra."
     ],
@@ -338,7 +338,7 @@
     "respuestas": [
       "Protección de Compras.",
       "No existe ese beneficio.",
-      "Garantía Extendida"
+      "Garantía Extendida."
     ],
     "correcta": 0
   },
@@ -357,7 +357,7 @@
     "contenido": "¿Cuánto tiempo adicional puede extender Visa la garantía de un producto elegible?",
     "respuestas": [
       "hasta 30 días.",
-      "hasta 60 días",
+      "hasta 60 días.",
       "Hasta 1 año adicional."
     ],
     "correcta": 2
@@ -366,8 +366,8 @@
     "numero": 65,
     "contenido": "¿Cuál es la cobertura anual de Garantía Extendida para Visa Infinite?",
     "respuestas": [
-      "US$ 15,000 por año.",
-      "USD 25.000 por año.",
+      "US$ 15.000 por año.",
+      "US$ 25.000 por año.",
       "US$ 30.000 por año."
     ],
     "correcta": 1
@@ -376,9 +376,9 @@
     "numero": 66,
     "contenido": "¿Cuál es el único segmento que cuenta con Fast Track?",
     "respuestas": [
-      "Visa Signature",
-      "Visa Platinum",
-      "Visa Infinite"
+      "Visa Signature.",
+      "Visa Platinum.",
+      "Visa Infinite."
     ],
     "correcta": 2
   },
@@ -386,9 +386,9 @@
     "numero": 67,
     "contenido": "¿Cuál es el beneficio con mayor cobertura económica dentro del portafolio de viajes?",
     "respuestas": [
-      "Servicios de Emergencia Médica Internacional con cobertura de hasta USD 150.000",
+      "Servicios de Emergencia Médica Internacional con cobertura de hasta USD 150.000.",
       "Servicios de Emergencia Médica Internacional con cobertura de hasta USD 250.000.",
-      "Servicios de Emergencia Médica Internacional con cobertura de hasta USD 300.000"
+      "Servicios de Emergencia Médica Internacional con cobertura de hasta USD 300.000."
     ],
     "correcta": 1
   },
