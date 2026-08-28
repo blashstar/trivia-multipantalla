@@ -162,7 +162,7 @@
 							>
 								<button
 									class="opcion"
-									:class="opcion === correcta ? 'correcta' : ''"
+									:class="{ seleccionada: parseInt(respuesta) === id, correcta: opcion === correcta }"
 									type="button"
 									@click="responder(id)"
 									:disabled="deshabilitada(id)"

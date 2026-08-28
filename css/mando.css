@@ -227,7 +227,7 @@ button{
 }
 
 #pregunta .opcion[disabled]{
-	opacity: 0.5;
+	opacity: 0.35;
 }
 
 #pregunta .opcion .letra{
@@ -280,6 +280,11 @@ button{
 	min-width: 2.5em;
 }
 
+#pregunta .opcion.seleccionada,
+#pregunta .opcion.seleccionada .letra,
+#pregunta .opcion.seleccionada .texto{
+	color: #FFCB00;
+}
 
 #pregunta .opcion.correcta{
 	background: #FFCB00;
