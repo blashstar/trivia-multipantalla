@@ -146,7 +146,7 @@
     "respuestas": [
       "Visa Airport Companion y Priority Pass",
       "Visa Airport Companion y LoungeKey",
-      "Todas las anteriores."
+      "Todas las anteriores"
     ],
     "correcta": 2
   },
@@ -337,7 +337,7 @@
     "contenido": "¿Qué beneficio protege productos nuevos contra robo o daño accidental?",
     "respuestas": [
       "Protección de Compras",
-      "No existe ese beneficio.",
+      "No existe ese beneficio",
       "Garantía Extendida"
     ],
     "correcta": 0
@@ -396,7 +396,7 @@
     "numero": 40,
     "contenido": "¿Qué beneficio está disponible exclusivamente para tarjetahabientes Visa Infinite en Global Blue?",
     "respuestas": [
-      "Acceso a los Global Blue Lounges.",
+      "Acceso a los Global Blue Lounges",
       "Protección de Compras Internacionales",
       "Roaming Internacional (GigSky)"
     ],
