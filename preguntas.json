@@ -225,9 +225,9 @@
     "numero": 23,
     "contenido": "¿Cuál es la cobertura de pérdida de equipaje para Visa Infinite?",
     "respuestas": [
-      "US$ 1,500",
+      "US$ 1.500",
       "US$ 3.000",
-      "US$ 4,000"
+      "US$ 4.000"
     ],
     "correcta": 1
   },
